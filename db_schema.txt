@@ -1,0 +1,22 @@
+
+Database schema
+===============
+database name: wellnessave
+username: wellness
+password: wave
+
+Tables
+------
+- user(user_ID(PK), user_email, user_first_name, user_last_name, account_type)
+
+- login(email(PK), password)
+
+- disorder(disorder_ID(PK), disorder_name, user_ID, doctor_ID)
+
+- doctor(doctor_ID(PK), title, doctor_name, doctor_surname, doctor_email)
+
+- bill(order_ID, user_ID, account_num, card_type, price)
+---
+
+(removed) - package(package_type(PK), (numofdisorders), price)
+---

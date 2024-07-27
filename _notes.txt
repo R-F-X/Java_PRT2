@@ -1,0 +1,11 @@
+
+for presentation
+- maybe add graphics to explain the flow of the system
+---
+
+SAVE DATABASE TO THE PROJECT DIR? 
+
+- remember to add derby client to pom.xml 
+---
+
+when opening the home page or admin control, add a parameter for userID in object
