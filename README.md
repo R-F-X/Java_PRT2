@@ -4,10 +4,10 @@ __Description__
 * Started:	06.05.24
 * Updated: 	27.07.24
 - Developers
-	* ![Kyran]("https://github.com/kyran-325") 
+	* https://github.com/kyran-325
 	* https://github.com/JoshuaTwigg
 	* https://github.com/PrincessUgbobuaku
-	* "https://github.com/BugAches"
+	* https://github.com/BugAches
 	* https://github.com/MissBabyRose28
 	* https://github.com/R-F-X
 
@@ -16,7 +16,7 @@ __Description__
 <!-- testing the comment -->
 
 ### More details about the application
-This app was created using Java, Java Swing GUI components, and Apache Derby
+###### This app was created using Java, Java Swing GUI components, and Apache Derby
 ---
 
 
