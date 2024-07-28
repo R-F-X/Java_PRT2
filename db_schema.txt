@@ -11,12 +11,17 @@ Tables
 
 - login(email(PK), password)
 
-- disorder(disorder_ID(PK), disorder_name, user_ID, doctor_ID)
+- disorder(disorder_ID(PK), disorder_name, user_ID(FK), doctor_ID(FK))
 
 - doctor(doctor_ID(PK), title, doctor_name, doctor_surname, doctor_email)
 
 - bill(order_ID, user_ID, account_num, card_type, price)
+
+- journal(journal_ID, user_ID, journal_entry)
 ---
 
 (removed) - package(package_type(PK), (numofdisorders), price)
+---
+
+NOTE: all attributes are strings (varchar) 
 ---

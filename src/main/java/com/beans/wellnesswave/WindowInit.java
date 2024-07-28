@@ -1,6 +1,13 @@
 
 package com.beans.wellnesswave;
 
+import com.beans.wellnesswave.GUI.WindowHome;
+import com.beans.wellnesswave.GUI.WindowAdmin;
+import com.beans.wellnesswave.GUI.WindowQuestionnaire;
+import com.beans.wellnesswave.databaseControl.DBInsert;
+import com.beans.wellnesswave.databaseControl.DBUpdate;
+import com.beans.wellnesswave.utilities.Tools;
+import com.beans.wellnesswave.utilities.Validation;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 
@@ -124,7 +131,6 @@ public class WindowInit extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Wellness Wave");
-        setPreferredSize(new java.awt.Dimension(600, 500));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -272,11 +278,15 @@ public class WindowInit extends javax.swing.JFrame {
                     .addComponent(lblEmail3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblConPassword6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblConPassword7, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE))
-                .addGap(12, 12, 12)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(resetEmail, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(resetPassword2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(resetPassword1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(resetEmail, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(resetPassword2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(resetPassword1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel13Layout.setVerticalGroup(
@@ -1587,9 +1597,12 @@ public class WindowInit extends javax.swing.JFrame {
     // =============================
 
     // LOGIN
+    // Validation v = new Validation();
+
     // patient
-    Validation v = new Validation();
     private void signupLBtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signupLBtn2MouseClicked
+        Validation v = new Validation();
+
         String adminEmail = PLoginEmail.getText();
         String adminPassword = PLoginPassword.getText();
         
@@ -1601,7 +1614,8 @@ public class WindowInit extends javax.swing.JFrame {
 
         if (a){
             this.dispose();
-            new WWW().setVisible(true);
+//            new WindowHome().setVisible(true);
+            new WindowHome(adminEmail).setVisible(true);
         }
         else{
             JOptionPane.showMessageDialog(
@@ -1617,16 +1631,18 @@ public class WindowInit extends javax.swing.JFrame {
         String adminEmail = ALoginEmail.getText();
         String adminPassword = ALoginPassword.getText();
         
+        System.out.println("NEW---------");
         System.out.println(adminEmail + " " + adminPassword);
         
-//        Validation v = new Validation();
+        Validation v = new Validation();
         boolean a = v.checkLoginPair(adminEmail, adminPassword);
         System.out.println("correct credentials: " + a);
         v.terminate();
 
         if (a){
             this.dispose();
-            new WindowAdmin().setVisible(true);
+//            new WindowAdmin().setVisible(true);
+            new WindowAdmin(adminEmail).setVisible(true);
         }
         else{
             JOptionPane.showMessageDialog(
@@ -1648,10 +1664,16 @@ public class WindowInit extends javax.swing.JFrame {
         String resetPassword = resetPassword1.getText(); 
         String resetPasswordConfirm = resetPassword2.getText(); 
 
-        if (resetPassword.equals(resetPassword)){
-            Validation v = new Validation();
+        if (resetPassword.equals(resetPasswordConfirm)){
+            // Validation v = new Validation();
+            DBUpdate.connect();
             DBUpdate.update("login", resetEmail, resetPassword);
-            DBUpdate.checkIfKeyInDB("login", "email", resetEmail);
+            
+            System.out.println(resetEmail);
+            
+            System.out.println(resetPassword);
+
+            // DBUpdate.checkIfKeyInDB("login", "email", resetEmail);
             
 //        boolean a = v.checkLoginPair(adminEmail, adminPassword);
 //        System.out.println("correct credentials: " + a);
