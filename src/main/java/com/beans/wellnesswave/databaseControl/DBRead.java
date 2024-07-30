@@ -8,8 +8,15 @@ import java.util.logging.Logger;
 public class DBRead {
     private static Connection con = null;
     private static Statement SQLStatement = null;
-    private static ResultSet result;
+    private static ResultSet result=null;
 
+    public static ResultSet getResult() {
+        return result;
+    }
+
+//    public ResultSet getResult() {
+//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
 
     // CONNECT
     public static void connect() {
@@ -184,6 +191,8 @@ public class DBRead {
             FileHandler.closeFile();
         }
     }
+
+    
 }
 
 

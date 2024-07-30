@@ -1,28 +1,258 @@
-
 package com.beans.wellnesswave.GUI;
 
+import com.beans.wellnesswave.databaseControl.DBDelete;
+import com.beans.wellnesswave.databaseControl.DBRead;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class WindowAdmin extends javax.swing.JFrame {
 
     public WindowAdmin() {
         initComponents();
-    }
-    
-//    protected String userID;
-    protected String userEmail;
 
-    public WindowAdmin(String inUserEmail){
-        initComponents();
-        
-//        this.userID = inUserID; 
-        this.userEmail = inUserEmail; 
+        //USER TABLE DELETE AND VIEW BUTTONS BELOW       
+//        jLabel17.addMouseListener(new MouseAdapter() {
+//            public void mouseClicked(MouseEvent e) {
+//                System.out.println("clicked");
+//                
+//                //create auto increment column in derby =     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, autoincrement doesnt exist here
+//                
+//                //instantiate databaseRead object
+//                DBRead readObj = new DBRead();
+//                //connect to db
+//                readObj.connect();
+//                //use read method
+//                readObj.readAllRecords("user_temp",5);
+////what if someone write a  numbe thats too big? does program explode? 
+//// 5 = nom of rows u want to see
+//                               
+//               
+//           
+//           
+//                    //get tablemodel of guibuilder table
+//                   DefaultTableModel model = (DefaultTableModel) tableUser.getModel();
+//                   model.setRowCount(0); // clear entire table. This prevents duplicate data display when clicking button more than once
+//                   //add this to all the others to fix their displays.
+//                   
+//            //!!!!! IF RESULTSET FROM GETTER PRINTS NOTHING, THE CURSOR IS OFF THE TABLE PAGE and needs to be reset           
+//                try{        
+//                    
+//                 ResultSet res = readObj.getResult();//getter to work with results in this class            
+//                    if (res == null) {
+//                        System.out.println("ResultSet is null.");
+//                        return; //
+//                    }
+//                     res.beforeFirst();//RESET cursor back to default pos, this is required else no results will display!
+//                    
+//                                
+//                int numOfCols = 5;
+//                   Object[] row = new Object[ numOfCols];
+//                    while (res.next()) {    //moves to the first row       
+//                        System.out.println("First loop");
+//                           
+//                       for (int i = 1; i <= numOfCols; i++) { // iterates through columns(5) columns so each pass does 1 row
+//                           
+//                    // Get the value from the ResultSet and add it to the row array
+//                    row[i - 1] = res.getObject(i); // Indices are 1-based in ResultSet cause array starts with 0 index resultset stars with 1
+//                }
+//                model.addRow(row);
+//            }
+//                }
+//                catch(SQLException ex){
+//                    System.out.println("this catch" + ex);
+//                }
+//                
+//                    
+//                readObj.terminate();
+//                
+//            }
+//        });
 
-        System.out.println("user email: " + userEmail);
-        this.adminEmail.setText(userEmail);
+        //USERS DELETE BUTTON
+//        jLabel5.addMouseListener(new MouseAdapter() {
+//            public void mouseClicked(MouseEvent e) {
+//                System.out.println("clicked");
+//
+//                String deleteValue = jTextField1.getText();
+//                int idDelete = Integer.parseInt(deleteValue);
+//                System.out.println(idDelete);
+//
+//                //create auto increment column in derby =     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, autoincrement doesnt exist here
+//                DBDelete deleteObj = new DBDelete();
+//                deleteObj.connect();
+//                deleteObj.delete("users", "ID", idDelete);//table,column,value
+//                deleteObj.terminate();
+//
+//            }
+//        });
+
+
+        // DOCTOR BUTTONS BELOW jlabel21
+        jLabel21.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                System.out.println("clicked");
+
+                //create auto increment column in derby =     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, autoincrement doesnt exist here
+                //instantiate databaseRead object
+                DBRead readObj = new DBRead();
+                //connect to db
+                readObj.connect();
+                //use read method
+                readObj.readAllRecords("doctors", 5);//what if someone write a  numbe thats too big? does program explode? // 5 = nom of rows u want to see
+
+                DefaultTableModel model = (DefaultTableModel) tableDoctor.getModel();
+
+                try {
+
+                    ResultSet res = readObj.getResult();//getter to work with results in this class            
+                    if (res == null) {
+                        System.out.println("ResultSet is null.");
+                        return; //
+                    }
+                    res.beforeFirst();
+
+                    int numOfCols = 5;
+                    Object[] row = new Object[numOfCols];
+                    while (res.next()) {    //moves to the first row       
+                        System.out.println("Doctor button loop");
+
+                        for (int i = 1; i <= numOfCols; i++) { // iterates through columns(5) columns so each pass does 1 row
+
+                            // Get the value from the ResultSet and add it to the row array
+                            row[i - 1] = res.getObject(i); // Indices are 1-based in ResultSet cause array starts with 0 index resultset stars with 1
+                        }
+                        model.addRow(row);
+                    }
+                } catch (SQLException ex) {
+                    System.out.println("this catch" + ex);
+                }
+
+                readObj.terminate();
+
+            }
+        });
+
+        // BILLS BUTTON BELOW label32                    
+        jLabel32.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                System.out.println("clicked");
+
+                //create auto increment column in derby =     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, autoincrement doesnt exist here
+                //instantiate databaseRead object
+                DBRead readObj = new DBRead();
+                //connect to db
+                readObj.connect();
+                //use read method
+                readObj.readAllRecords("bill", 5);//what if someone write a  numbe thats too big? does program explode? // 5 = nom of rows u want to see
+
+                DefaultTableModel model = (DefaultTableModel) tableBill.getModel();
+
+                try {
+
+                    ResultSet res = readObj.getResult();//getter to work with results in this class            
+                    if (res == null) {
+                        System.out.println("ResultSet is null.");
+                        return; //
+                    }
+                    res.beforeFirst();
+
+                    int numOfCols = 5;
+                    Object[] row = new Object[numOfCols];
+                    while (res.next()) {    //moves to the first row       
+                        System.out.println("Bill button loop");
+
+                        for (int i = 1; i <= numOfCols; i++) { // iterates through columns(5) columns so each pass does 1 row
+
+                            // Get the value from the ResultSet and add it to the row array
+                            row[i - 1] = res.getObject(i); // Indices are 1-based in ResultSet cause array starts with 0 index resultset stars with 1
+                        }
+                        model.addRow(row);
+                    }
+                } catch (SQLException ex) {
+                    System.out.println("this catch" + ex);
+                }
+
+                readObj.terminate();
+
+            }
+        });
+
+        // DISORDERS BUTTON BELOW label36
+        jLabel36.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                System.out.println("clicked");
+
+                //create auto increment column in derby =     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, autoincrement doesnt exist here
+                //instantiate databaseRead object
+//                DBRead readObj = new DBRead();
+//                //connect to db
+//                readObj.connect();
+//                //use read method
+//                readObj.readAllRecords("disorder",4);//what if someone write a  numbe thats too big? does program explode? // 5 = nom of rows u want to see
+//          
+                DBRead.connect();
+                //use read method
+                DBRead.readAllRecords("disorder", 4);//what if someone write a  numbe thats too big? does program explode? // 5 = nom of rows u want to see
+
+                DefaultTableModel model = (DefaultTableModel) tableDisorder.getModel();
+
+                try {
+
+                    ResultSet res = DBRead.getResult();
+//getter to work with results in this class            
+                    if (res == null) {
+                        System.out.println("ResultSet is null.");
+                        return; //
+                    }
+                    res.beforeFirst();
+
+                    int numOfCols = 4;
+                    Object[] row = new Object[numOfCols];
+                    while (res.next()) {    //moves to the first row       
+                        System.out.println("Disorder button loop");
+
+                        for (int i = 1; i <= numOfCols; i++) { // iterates through columns(5) columns so each pass does 1 row
+
+                            // Get the value from the ResultSet and add it to the row array
+                            row[i - 1] = res.getObject(i); // Indices are 1-based in ResultSet cause array starts with 0 index resultset stars with 1
+                        }
+                        model.addRow(row);
+                    }
+                } catch (SQLException ex) {
+                    System.out.println("this catch" + ex);
+                }
+
+                DBRead.terminate();
+
+            }
+        });
+
+        //DISORDERS DELETE BUTTON                  
+        jLabel41.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                System.out.println("clicked");
+
+                String deleteValue = jTextField7.getText();
+                // int idDelete = Integer.parseInt(deleteValue);
+                // System.out.println(idDelete);
+
+                //create auto increment column in derby =     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, autoincrement doesnt exist here
+                DBDelete deleteObj = new DBDelete();
+                deleteObj.connect();
+                deleteObj.delete("disorder", "DISORDER_ID", deleteValue);//table,column,value
+                deleteObj.terminate();
+
+            }
+        });
+
     }
-    
-    @SuppressWarnings("unchecked")
+
+
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -30,11 +260,9 @@ public class WindowAdmin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
-        adminEmail = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
-        jLabel23 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tableUser = new javax.swing.JTable();
@@ -97,6 +325,7 @@ public class WindowAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Admin Control");
+        setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -130,40 +359,6 @@ public class WindowAdmin extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel25.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel25.setText("Email Address:  ");
-        jLabel25.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel25.setPreferredSize(new java.awt.Dimension(140, 40));
-        jLabel25.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel25MouseClicked(evt);
-            }
-        });
-
-        adminEmail.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        adminEmail.setForeground(new java.awt.Color(255, 255, 255));
-        adminEmail.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        adminEmail.setText("email");
-        adminEmail.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        adminEmail.setPreferredSize(new java.awt.Dimension(140, 40));
-        adminEmail.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                adminEmailMouseClicked(evt);
-            }
-        });
-
-        jTextArea3.setEditable(false);
-        jTextArea3.setBackground(new java.awt.Color(0, 0, 0));
-        jTextArea3.setColumns(20);
-        jTextArea3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextArea3.setForeground(new java.awt.Color(255, 255, 255));
-        jTextArea3.setRows(5);
-        jTextArea3.setText("\n    The Admin Control Panel consists of five main sections.\n    Each each deals with a specific table in the database.  \n\n    An administator can modify, delete, and view\n    records pertaining to Wellness Wave.\n");
-        jTextArea3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jScrollPane3.setViewportView(jTextArea3);
-
         jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -177,32 +372,31 @@ public class WindowAdmin extends javax.swing.JFrame {
             }
         });
 
+        jTextArea3.setEditable(false);
+        jTextArea3.setBackground(new java.awt.Color(0, 0, 0));
+        jTextArea3.setColumns(20);
+        jTextArea3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextArea3.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea3.setRows(5);
+        jTextArea3.setText("\n    The Admin Control Panel consists of five main sections.\n    Each each deals with a specific table in the database.  \n\n    An administator can modify, delete, and view\n    records pertaining to Wellness Wave.\n");
+        jTextArea3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jScrollPane3.setViewportView(jTextArea3);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(adminEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(265, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(adminEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
+                .addGap(89, 89, 89)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
                 .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -222,44 +416,15 @@ public class WindowAdmin extends javax.swing.JFrame {
         tableUser.setForeground(new java.awt.Color(255, 255, 255));
         tableUser.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"same34", "sam", "ghe", "samg@gmail.com", "patient"},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "user_ID", "first_name", "last_name", "user_email", "user_type"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         tableUser.setGridColor(new java.awt.Color(255, 255, 255));
         tableUser.setPreferredSize(new java.awt.Dimension(300, 250));
         jScrollPane2.setViewportView(tableUser);
-        if (tableUser.getColumnModel().getColumnCount() > 0) {
-            tableUser.getColumnModel().getColumn(2).setHeaderValue("last_name");
-            tableUser.getColumnModel().getColumn(3).setHeaderValue("doctor_email");
-        }
 
         jPanel10.setBackground(new java.awt.Color(0, 0, 0));
         jPanel10.setPreferredSize(new java.awt.Dimension(195, 100));
@@ -326,9 +491,15 @@ public class WindowAdmin extends javax.swing.JFrame {
         jLabel5.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel5.setPreferredSize(new java.awt.Dimension(140, 40));
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
 
         jTextField1.setBackground(new java.awt.Color(0, 0, 0));
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField1.setText("5");
         jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(255, 255, 255)));
         jTextField1.setPreferredSize(new java.awt.Dimension(100, 40));
 
@@ -403,24 +574,7 @@ public class WindowAdmin extends javax.swing.JFrame {
         tableDisorder.setForeground(new java.awt.Color(255, 255, 255));
         tableDisorder.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"same34", "patient", "sam", "ghe"},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "disorder_ID", "disorder_name", "user_ID", "doctor_ID"
@@ -437,9 +591,6 @@ public class WindowAdmin extends javax.swing.JFrame {
         tableDisorder.setGridColor(new java.awt.Color(255, 255, 255));
         tableDisorder.setPreferredSize(new java.awt.Dimension(300, 250));
         jScrollPane7.setViewportView(tableDisorder);
-        if (tableDisorder.getColumnModel().getColumnCount() > 0) {
-            tableDisorder.getColumnModel().getColumn(3).setHeaderValue("last_name");
-        }
 
         jPanel26.setBackground(new java.awt.Color(0, 0, 0));
         jPanel26.setPreferredSize(new java.awt.Dimension(195, 100));
@@ -522,11 +673,11 @@ public class WindowAdmin extends javax.swing.JFrame {
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel28Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
                 .addGap(25, 25, 25))
         );
         jPanel28Layout.setVerticalGroup(
@@ -564,11 +715,11 @@ public class WindowAdmin extends javax.swing.JFrame {
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel30Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
                 .addGap(25, 25, 25))
         );
         jPanel30Layout.setVerticalGroup(
@@ -630,24 +781,7 @@ public class WindowAdmin extends javax.swing.JFrame {
         tableDoctor.setForeground(new java.awt.Color(255, 255, 255));
         tableDoctor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"same34", "patient", "sam", "ghe", "samg@gmail.com"},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "doctor_ID", "title", "first_name", "last_name", "doctor_email"
@@ -664,10 +798,6 @@ public class WindowAdmin extends javax.swing.JFrame {
         tableDoctor.setGridColor(new java.awt.Color(255, 255, 255));
         tableDoctor.setPreferredSize(new java.awt.Dimension(300, 250));
         jScrollPane4.setViewportView(tableDoctor);
-        if (tableDoctor.getColumnModel().getColumnCount() > 0) {
-            tableDoctor.getColumnModel().getColumn(3).setHeaderValue("last_name");
-            tableDoctor.getColumnModel().getColumn(4).setHeaderValue("doctor_email");
-        }
 
         jPanel14.setBackground(new java.awt.Color(0, 0, 0));
         jPanel14.setPreferredSize(new java.awt.Dimension(195, 100));
@@ -750,7 +880,7 @@ public class WindowAdmin extends javax.swing.JFrame {
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1034,24 +1164,7 @@ public class WindowAdmin extends javax.swing.JFrame {
         tableBill.setForeground(new java.awt.Color(255, 255, 255));
         tableBill.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"same34", "patient", "sam", "ghe", null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "order_ID", "account_num", "user_ID", "package_type", "payment_method"
@@ -1068,9 +1181,6 @@ public class WindowAdmin extends javax.swing.JFrame {
         tableBill.setGridColor(new java.awt.Color(255, 255, 255));
         tableBill.setPreferredSize(new java.awt.Dimension(300, 250));
         jScrollPane6.setViewportView(tableBill);
-        if (tableBill.getColumnModel().getColumnCount() > 0) {
-            tableBill.getColumnModel().getColumn(3).setHeaderValue("last_name");
-        }
 
         jPanel22.setBackground(new java.awt.Color(0, 0, 0));
         jPanel22.setPreferredSize(new java.awt.Dimension(195, 100));
@@ -1182,14 +1292,60 @@ public class WindowAdmin extends javax.swing.JFrame {
                 "Log out?",
                 JOptionPane.PLAIN_MESSAGE
         );
-        
-        if (logOutCode == 0){
-            System.exit(0);
+
+        if (logOutCode == 0) {
+            this.dispose();
         }
     }//GEN-LAST:event_jLabel23MouseClicked
 
+    // USERS TABLE
+    // VIEW ALL
     private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
-        // TODO add your handling code here:
+        System.out.println("clicked");
+
+        //create auto increment column in derby =     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, autoincrement doesnt exist here
+        //instantiate databaseRead object
+        DBRead readObj = new DBRead();
+        //connect to db
+        readObj.connect();
+        //use read method
+        readObj.readAllRecords("user_temp", 5);
+//what if someone write a  numbe thats too big? does program explode? 
+// 5 = nom of rows u want to see
+
+        //get tablemodel of guibuilder table
+        DefaultTableModel model = (DefaultTableModel) tableUser.getModel();
+        model.setRowCount(0); // clear entire table. This prevents duplicate data display when clicking button more than once
+        //add this to all the others to fix their displays.
+
+        //!!!!! IF RESULTSET FROM GETTER PRINTS NOTHING, THE CURSOR IS OFF THE TABLE PAGE and needs to be reset           
+        try {
+
+            ResultSet res = readObj.getResult();//getter to work with results in this class            
+            if (res == null) {
+                System.out.println("ResultSet is null.");
+                return; //
+            }
+            res.beforeFirst();//RESET cursor back to default pos, this is required else no results will display!
+
+            int numOfCols = 5;
+            Object[] row = new Object[numOfCols];
+            while (res.next()) {    //moves to the first row       
+                System.out.println("First loop");
+
+                for (int i = 1; i <= numOfCols; i++) { // iterates through columns(5) columns so each pass does 1 row
+
+                    // Get the value from the ResultSet and add it to the row array
+                    row[i - 1] = res.getObject(i); // Indices are 1-based in ResultSet cause array starts with 0 index resultset stars with 1
+                }
+                model.addRow(row);
+            }
+        } catch (SQLException ex) {
+            System.out.println("this catch" + ex);
+        }
+
+        readObj.terminate();
+
     }//GEN-LAST:event_jLabel17MouseClicked
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
@@ -1208,13 +1364,24 @@ public class WindowAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel36MouseClicked
 
-    private void adminEmailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_adminEmailMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_adminEmailMouseClicked
+    // USERS TABLE
+    // DELETE
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        System.out.println("clicked");
 
-    private void jLabel25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel25MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel25MouseClicked
+                String deleteValue = jTextField1.getText();
+//                int idDelete = Integer.parseInt(deleteValue);
+//                System.out.println(idDelete);
+
+                //create auto increment column in derby =     
+                // id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, autoincrement doesnt exist here
+
+                DBDelete deleteObj = new DBDelete();
+                deleteObj.connect();
+                deleteObj.delete("user_temp", "user_ID", deleteValue);
+                deleteObj.terminate();
+
+    }//GEN-LAST:event_jLabel5MouseClicked
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -1252,7 +1419,6 @@ public class WindowAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel adminEmail;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1260,7 +1426,6 @@ public class WindowAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
