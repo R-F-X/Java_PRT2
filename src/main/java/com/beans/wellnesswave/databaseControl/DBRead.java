@@ -18,6 +18,7 @@ public class DBRead {
 //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
 //    }
 
+    
     // CONNECT
     public static void connect() {
         System.out.println("Trying to connect to database...");
@@ -30,7 +31,12 @@ public class DBRead {
             con = DriverManager.getConnection(dbURL, username, password);
             System.out.println("\n<Connection Established Successfully>");
             
-            SQLStatement = con.createStatement();
+            SQLStatement = con.createStatement(
+                    ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_READ_ONLY
+            );
+//            SQLStatement = con.createStatement();
+
             System.out.println("<SQL Statement ready>");
         } catch (SQLException sqlErr) {
             System.out.println("*Error*");
@@ -77,8 +83,8 @@ public class DBRead {
     // READ and display 
     public static void readAllRecords(String tableName, int numOfCols) {
         System.out.println("\nALL DATA from " + tableName + " <table>");
-//        String retrieve_Values_qry = "SELECT * FROM " + tableName;
-        String retrieve_Values_qry = "SELECT * FROM " + tableName + " WHERE user_email='" + "'";
+        String retrieve_Values_qry = "SELECT * FROM " + tableName;
+//        String retrieve_Values_qry = "SELECT * FROM " + tableName + " WHERE user_email='" + "'";
 
         try {
             result = SQLStatement.executeQuery(retrieve_Values_qry);
@@ -96,7 +102,7 @@ public class DBRead {
                 }
             }
 
-            result.close();
+            // result.close();
             System.out.println("\n<SQL statement executed Successfully>");
 
         } catch (SQLException ex) {
@@ -129,7 +135,7 @@ public class DBRead {
                 }
             }
 
-            result.close();
+            // result.close();
             System.out.println("\n<SQL statement executed Successfully>");
 
         } catch (SQLException ex) {

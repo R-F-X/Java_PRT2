@@ -1,7 +1,6 @@
 com\beans\WellnessWave\tests\WindowAdmin.class
 com\beans\WellnessWave\tests\WindowAdmin$6.class
 com\beans\WellnessWave\GUI\WindowAdmin$11.class
-com\beans\WellnessWave\tests\WindowAdmin$12.class
 com\beans\WellnessWave\databaseControl\DBC.class
 com\beans\WellnessWave\databaseControl\DBRead.class
 com\beans\WellnessWave\WindowInit$10.class
@@ -10,7 +9,6 @@ com\beans\WellnessWave\WindowInit$8.class
 com\beans\WellnessWave\WindowInit$5.class
 com\beans\WellnessWave\older\WindowAdmin$4.class
 com\beans\WellnessWave\databaseControl\DBDelete.class
-com\beans\WellnessWave\GUI\WindowAdmin$14.class
 com\beans\WellnessWave\WindowInit$30.class
 com\beans\WellnessWave\WindowInit$40.class
 com\beans\WellnessWave\older\OlderWWW.class
@@ -19,7 +17,6 @@ com\beans\WellnessWave\older\OlderWWW$6.class
 com\beans\WellnessWave\GUI\WindowResources$8.class
 com\beans\WellnessWave\GUI\WindowAdmin$7.class
 com\beans\WellnessWave\older\WindowAdmin$1.class
-com\beans\WellnessWave\tests\WindowAdmin$15.class
 com\beans\WellnessWave\GUI\WindowSelectDisorder.class
 com\beans\WellnessWave\tests\WindowAdmin$9.class
 com\beans\WellnessWave\WindowInit$2.class
@@ -32,6 +29,7 @@ com\beans\WellnessWave\GUI\WindowQuestionnaire$11.class
 com\beans\WellnessWave\GUI\WindowQuestionnaire$7.class
 com\beans\WellnessWave\GUI\WindowResources$2.class
 com\beans\WellnessWave\GUI\WindowHome$2.class
+com\beans\WellnessWave\utilities\Table.class
 com\beans\WellnessWave\GUI\WindowQuestionnaire$4.class
 com\beans\WellnessWave\older\WindowAdmin$7.class
 com\beans\WellnessWave\WindowInit$18.class
@@ -44,7 +42,6 @@ com\beans\WellnessWave\WindowInit$23.class
 com\beans\WellnessWave\GUI\WindowQuestionnaire$10.class
 com\beans\WellnessWave\tests\WindowAdmin$1.class
 com\beans\WellnessWave\GUI\WindowBill$3.class
-com\beans\WellnessWave\tests\WindowAdmin$14.class
 com\beans\WellnessWave\GUI\WindowSelectDisorder$2.class
 com\beans\WellnessWave\WindowInit$25.class
 com\beans\WellnessWave\WindowInit$35.class
@@ -62,7 +59,6 @@ com\beans\WellnessWave\WindowInit.class
 com\beans\WellnessWave\utilities\FileHandler.class
 com\beans\WellnessWave\databaseControl\DBUpdate.class
 com\beans\WellnessWave\tests\WindowAdmin$7.class
-com\beans\WellnessWave\tests\WindowAdmin$13.class
 com\beans\WellnessWave\WindowInit$19.class
 com\beans\WellnessWave\GUI\WindowHome$3.class
 com\beans\WellnessWave\WindowInit$6.class
@@ -104,18 +100,17 @@ com\beans\WellnessWave\GUI\WindowResources$9.class
 com\beans\WellnessWave\databaseControl\DBController.class
 com\beans\WellnessWave\WindowInit$1.class
 com\beans\WellnessWave\WindowInit$11.class
-com\beans\WellnessWave\GUI\WindowAdmin$13.class
 com\beans\WellnessWave\GUI\WindowAdmin$6.class
 com\beans\WellnessWave\tests\WindowAdmin$11.class
 com\beans\WellnessWave\GUI\WindowAdmin$3.class
 com\beans\WellnessWave\tests\WindowAdmin$8.class
 com\beans\WellnessWave\GUI\WindowQuestionnaire$1.class
 com\beans\WellnessWave\tests\WindowAdmin$5.class
+com\beans\WellnessWave\tests\TestInsertTable.class
 com\beans\WellnessWave\GUI\WindowResources$6.class
 com\beans\WellnessWave\WindowInit$15.class
 com\beans\WellnessWave\WindowInit$3.class
 com\beans\WellnessWave\GUI\WindowAdmin$2.class
-com\beans\WellnessWave\GUI\WindowAdmin$16.class
 com\beans\WellnessWave\GUI\WindowHome$6.class
 com\beans\WellnessWave\GUI\WindowAdmin.class
 com\beans\WellnessWave\older\WindowAdmin$13.class
@@ -124,7 +119,6 @@ com\beans\WellnessWave\GUI\WindowQuestionnaire$8.class
 com\beans\WellnessWave\older\OlderWWW$1.class
 com\beans\WellnessWave\GUI\WindowAdmin$9.class
 com\beans\WellnessWave\TestMain.class
-com\beans\WellnessWave\tests\WindowAdmin$17.class
 com\beans\WellnessWave\tests\WindowAdmin$10.class
 com\beans\WellnessWave\WindowInit$32.class
 com\beans\WellnessWave\tests\WindowAdmin$4.class
@@ -134,7 +128,6 @@ com\beans\WellnessWave\GUI\WindowAdmin$8.class
 com\beans\WellnessWave\utilities\Validation.class
 com\beans\WellnessWave\older\WindowAdmin$12.class
 com\beans\WellnessWave\WindowInit$16.class
-com\beans\WellnessWave\GUI\WindowAdmin$15.class
 com\beans\WellnessWave\older\WindowAdmin$8.class
 com\beans\WellnessWave\GUI\WindowQuestionnaire$2.class
 com\beans\WellnessWave\GUI\WindowResources$7.class
@@ -146,7 +139,6 @@ com\beans\WellnessWave\older\WindowAdmin.class
 com\beans\WellnessWave\GUI\WindowQuestionnaire$13.class
 com\beans\WellnessWave\GUI\WindowQuestionnaire$9.class
 com\beans\WellnessWave\tests\WindowAdmin$3.class
-com\beans\WellnessWave\tests\WindowAdmin$16.class
 com\beans\WellnessWave\WindowInit$21.class
 com\beans\WellnessWave\WindowInit$28.class
 com\beans\WellnessWave\older\WindowAdmin$2.class
