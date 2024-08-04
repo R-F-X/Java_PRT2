@@ -20,23 +20,23 @@ public class TestMain {
         // adding doctors
         // - doctor(doctor_ID(PK), title, doctor_name, doctor_surname, doctor_email, (disorder_ID/name))
         String doctorID1 = Tools.createUserID(Tools.generateRandomNumStr(), "doctor");
-        insert.insertRecord(
-                "doctor", 
-                doctorID1, 
-                "Mr", 
-                "Nigel",
-                "Cass",
-                "nigelDoc@gmail.com"
-        );
+//        insert.insertRecord(
+//                "doctor", 
+//                doctorID1, 
+//                "Mrs", 
+//                "Gill",
+//                "Saash",
+//                "gillash@gmail.com"
+//        );
         
         // adding disorders
         // - disorder(disorder_ID(PK), disorder_name, user_ID(FK), doctor_ID(FK))
-        String userID1 = "";
+        String userID1 = "user223";
         String disorderID = Tools.createUserID(Tools.generateRandomNumStr(), "disorder");
         insert.insertRecord(
                 "disorder", 
                 disorderID,
-                "anxiety", 
+                "depression", 
                 userID1,
                 doctorID1
         );

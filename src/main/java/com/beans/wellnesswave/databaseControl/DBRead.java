@@ -61,6 +61,7 @@ public class DBRead {
     }
     // =====================================
 
+    
     /*
     * SELECT query examples
     * ---------------------
@@ -145,8 +146,36 @@ public class DBRead {
         return personalInfo; 
     }
     
-    public static void readAllRecords(String tableName, String colName) {
-    
+    public static boolean readRecord(String tableName, String attribute, int numOfCols) {
+        boolean recordExists = false; 
+        String query = "SELECT * FROM " + tableName + " WHERE disorder_ID='" + attribute + "'";
+        System.out.println(query);
+        try {
+            result = SQLStatement.executeQuery(query);
+
+            int row = 0;
+            if (result != null) {
+                while (result.next()) {
+                    row++;
+                    System.out.println("Data from row: " + row);
+                        
+                    for (int a=1; a < numOfCols+1; a++){
+                        System.out.print(result.getString(a) + " | ");
+                    }
+                    System.out.println("\n");
+                }
+            }
+
+            result.close();
+            System.out.println("\n<SQL statement executed Successfully>");
+            recordExists = true; 
+
+        } 
+        catch (SQLException ex) {
+            Logger.getLogger(DBRead.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return recordExists; 
     }
     // =====================================
     

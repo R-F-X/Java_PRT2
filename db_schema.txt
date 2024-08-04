@@ -17,11 +17,11 @@ Tables
 
 - bill(order_ID, user_ID, account_num, card_type, price)
 
-- journal(journal_ID, user_ID, journal_entry)
+- journal(journal_ID(varchar(40)), user_ID, journal_entry)
 ---
 
 (removed) - package(package_type(PK), (numofdisorders), price)
 ---
 
-NOTE: all attributes are strings (varchar) 
+NOTE: all attributes are strings (varchar(30)) except for journal_ID
 ---

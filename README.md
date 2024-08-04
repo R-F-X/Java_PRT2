@@ -1,8 +1,10 @@
 # Program:	Wellness Wave
 __Description__ 	
 > _Desktop app to help people with mental-health challenges_
-* Started:	06.05.24
-* Updated: 	30.07.24
+- Started:	06.05.24
+- Updated: 	04.08.24
+- Status:	work-in-progress
+
 - Developers
 	* https://github.com/kyran-325
 	* https://github.com/JoshuaTwigg
@@ -10,8 +12,6 @@ __Description__
 	* https://github.com/BugAches
 	* https://github.com/MissBabyRose28
 	* https://github.com/R-F-X
-
-- Status:	work-in-progress
 ---
 <!-- testing the comment -->
 
@@ -21,6 +21,11 @@ __Description__
 
 
 ### Screenshots
+![Home (for patient)](_screenshots/sshotHome.png "Home")
+
+![Admin Control (for system administrators)](_screenshots/sshotAdminControl.png "Admin COntrol")
+
+
 ![Screenshot #1](_screenshots/sshot1.png "Cover")
 
 ![Screenshot #2](_screenshots/sshot3.png "Screenshot2")

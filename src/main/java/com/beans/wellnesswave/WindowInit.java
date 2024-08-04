@@ -1,8 +1,8 @@
 
 package com.beans.wellnesswave;
 
+import com.beans.wellnesswave.GUI.WindowAdmin;
 import com.beans.wellnesswave.GUI.WindowHome;
-import com.beans.wellnesswave.older.WindowAdmin;
 import com.beans.wellnesswave.GUI.WindowQuestionnaire;
 import com.beans.wellnesswave.databaseControl.DBInsert;
 import com.beans.wellnesswave.databaseControl.DBUpdate;
@@ -75,7 +75,6 @@ public class WindowInit extends javax.swing.JFrame {
         ALoginEmail = new javax.swing.JTextField();
         ALoginPassword = new javax.swing.JPasswordField();
         signupLBtn3 = new javax.swing.JLabel();
-        enterAppBtn2 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         paneUserLogin = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -86,7 +85,6 @@ public class WindowInit extends javax.swing.JFrame {
         PLoginEmail = new javax.swing.JTextField();
         PLoginPassword = new javax.swing.JPasswordField();
         signupLBtn2 = new javax.swing.JLabel();
-        enterAppBtn1 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         paneSignup = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
@@ -564,19 +562,6 @@ public class WindowInit extends javax.swing.JFrame {
             }
         });
 
-        enterAppBtn2.setBackground(new java.awt.Color(0, 0, 0));
-        enterAppBtn2.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        enterAppBtn2.setForeground(new java.awt.Color(255, 255, 255));
-        enterAppBtn2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        enterAppBtn2.setText("Forgot password?");
-        enterAppBtn2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        enterAppBtn2.setPreferredSize(new java.awt.Dimension(80, 20));
-        enterAppBtn2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                enterAppBtn2MouseClicked(evt);
-            }
-        });
-
         jLabel25.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -597,9 +582,7 @@ public class WindowInit extends javax.swing.JFrame {
                             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(paneAdminLoginLayout.createSequentialGroup()
                         .addGap(238, 238, 238)
-                        .addGroup(paneAdminLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(signupLBtn3, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                            .addComponent(enterAppBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(signupLBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneAdminLoginLayout.createSequentialGroup()
                 .addGap(0, 126, Short.MAX_VALUE)
@@ -613,7 +596,7 @@ public class WindowInit extends javax.swing.JFrame {
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(383, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneAdminLoginLayout.createSequentialGroup()
-                .addContainerGap(45, Short.MAX_VALUE)
+                .addContainerGap(47, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel25)
@@ -621,9 +604,7 @@ public class WindowInit extends javax.swing.JFrame {
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(signupLBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(enterAppBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54))
+                .addGap(117, 117, 117))
         );
 
         jTabbedPane1.addTab("AdminL", paneAdminLogin);
@@ -712,19 +693,6 @@ public class WindowInit extends javax.swing.JFrame {
             }
         });
 
-        enterAppBtn1.setBackground(new java.awt.Color(0, 0, 0));
-        enterAppBtn1.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        enterAppBtn1.setForeground(new java.awt.Color(255, 255, 255));
-        enterAppBtn1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        enterAppBtn1.setText("Forgot password?");
-        enterAppBtn1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        enterAppBtn1.setPreferredSize(new java.awt.Dimension(80, 20));
-        enterAppBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                enterAppBtn1MouseClicked(evt);
-            }
-        });
-
         jLabel26.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -738,9 +706,7 @@ public class WindowInit extends javax.swing.JFrame {
                 .addGroup(paneUserLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(paneUserLoginLayout.createSequentialGroup()
                         .addGap(238, 238, 238)
-                        .addGroup(paneUserLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(signupLBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                            .addComponent(enterAppBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(signupLBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(paneUserLoginLayout.createSequentialGroup()
                         .addGap(124, 124, 124)
                         .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -751,7 +717,7 @@ public class WindowInit extends javax.swing.JFrame {
                         .addGroup(paneUserLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE))))
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
         paneUserLoginLayout.setVerticalGroup(
             paneUserLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -766,9 +732,7 @@ public class WindowInit extends javax.swing.JFrame {
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(signupLBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(enterAppBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("PatientL", paneUserLogin);
@@ -1406,14 +1370,6 @@ public class WindowInit extends javax.swing.JFrame {
         this.setTitle("Wellness Wave - Login");
     }//GEN-LAST:event_enterAppBtnMouseClicked
 
-    private void enterAppBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enterAppBtn1MouseClicked
-        jTabbedPane1.setSelectedIndex(1);
-    }//GEN-LAST:event_enterAppBtn1MouseClicked
-
-    private void enterAppBtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enterAppBtn2MouseClicked
-        jTabbedPane1.setSelectedIndex(1);
-    }//GEN-LAST:event_enterAppBtn2MouseClicked
-
     private void txtFieldFName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldFName1ActionPerformed
         // to be coded...
     }//GEN-LAST:event_txtFieldFName1ActionPerformed
@@ -1667,7 +1623,7 @@ public class WindowInit extends javax.swing.JFrame {
         if (resetPassword.equals(resetPasswordConfirm)){
             // Validation v = new Validation();
             DBUpdate.connect();
-            DBUpdate.update("login", resetEmail, resetPassword);
+            // DBUpdate.update("login", resetEmail, resetPassword);
             
             System.out.println(resetEmail);
             
@@ -1772,8 +1728,6 @@ public class WindowInit extends javax.swing.JFrame {
     private javax.swing.JPasswordField PLoginPassword;
     private javax.swing.JPanel coverPane;
     private javax.swing.JLabel enterAppBtn;
-    private javax.swing.JLabel enterAppBtn1;
-    private javax.swing.JLabel enterAppBtn2;
     private javax.swing.JLabel enterAppBtn3;
     private javax.swing.JLabel enterAppBtn4;
     private javax.swing.JLabel jLabel1;

@@ -13,8 +13,7 @@ SAVE DATABASE TO THE PROJECT DIR?
 ---
 
 to-do
-- find a way to add disorder and doctor records
+- add update feature to doctor records (admin dashboard)
 - find a way to display journal entries
 - find a way to reset password
-- combine joshua's admin code with the rest of the project
 ---
