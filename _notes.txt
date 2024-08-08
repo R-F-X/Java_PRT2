@@ -3,17 +3,14 @@ for presentation
 - maybe add graphics to explain the flow of the system
 ---
 
-SAVE DATABASE TO THE PROJECT DIR? 
 
-- remember to add derby client to pom.xml 
----
-
-- maybe remove view journal feature, and reset password for now
-- make userID and journal ID longer = 50 chars
----
-
-to-do
+to-do (after presentation)
 - add update feature to doctor records (admin dashboard)
 - find a way to display journal entries
 - find a way to reset password
+
+- connect disorder option (WindowSelectDisorder) to the database
+- adjust color scheme
+- (journal) get data from text area and save to textfile
+- min of 10 records per table (find a way to do this quickly) 
 ---

@@ -3,6 +3,7 @@ package com.beans.wellnesswave.databaseControl;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 public class DBInsert {
     private Connection con = null;
@@ -100,6 +101,7 @@ public class DBInsert {
             int res = pStatement.executeUpdate();
             // System.out.println(res + " records inserted");
             System.out.println("<INSERTION SUCCESSFUL>");
+            JOptionPane.showMessageDialog(null, "Insertion Successful");
 
         } catch (SQLException SQLErr) {
             System.out.println("*Error*");
@@ -129,6 +131,7 @@ public class DBInsert {
 
             pStatement.executeUpdate();
             System.out.println("<INSERTION SUCCESSFUL>");
+            JOptionPane.showMessageDialog(null, "Insertion Successful");
 
         } catch (SQLException SQLErr) {
             System.out.println("*Error*");
@@ -155,6 +158,7 @@ public class DBInsert {
 
             pStatement.executeUpdate();
             System.out.println("<INSERTION SUCCESSFUL>");
+            JOptionPane.showMessageDialog(null, "Insertion Successful");
 
         } catch (SQLException SQLErr) {
             System.out.println("*Error*");
@@ -183,8 +187,9 @@ public class DBInsert {
 
             pStatement.executeUpdate();
             System.out.println("<INSERTION SUCCESSFUL>");
-
-        } catch (SQLException SQLErr) {
+            JOptionPane.showMessageDialog(null, "Insertion Successful");
+        } 
+        catch (SQLException SQLErr) {
             System.out.println("*Error*");
             System.out.println(SQLErr.getMessage());
         }

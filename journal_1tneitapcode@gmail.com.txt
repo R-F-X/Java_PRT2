@@ -1,3 +1,0 @@
-712465 | 1tneitapcode@gmail.com | 
-thisjoirnalisheree..... | 7665 | 1tneitapcode@gmail.com | 
-In order to create a BufferedWriter, we must import the java.io.BufferedWriter package first. Once we import the package here is how we thdo taad  | 

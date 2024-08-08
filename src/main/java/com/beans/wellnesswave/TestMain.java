@@ -1,6 +1,7 @@
 
 package com.beans.wellnesswave;
 
+import com.beans.wellnesswave.GUI.WindowAdmin;
 import com.beans.wellnesswave.databaseControl.DBDelete;
 import com.beans.wellnesswave.databaseControl.DBInsert;
 import com.beans.wellnesswave.utilities.FileHandler;
@@ -15,36 +16,42 @@ public class TestMain {
 //        FileHandler.closeFile();
         
 
-        DBInsert insert = new DBInsert();
-
-        // adding doctors
-        // - doctor(doctor_ID(PK), title, doctor_name, doctor_surname, doctor_email, (disorder_ID/name))
-        String doctorID1 = Tools.createUserID(Tools.generateRandomNumStr(), "doctor");
+//        DBInsert insert = new DBInsert();
+//
+//        // adding doctors
+//        // - doctor(doctor_ID(PK), title, doctor_name, doctor_surname, doctor_email, (disorder_ID/name))
+//        String doctorID1 = Tools.createUserID(Tools.generateRandomNumStr(), "doctor");
+////        insert.insertRecord(
+////                "doctor", 
+////                doctorID1, 
+////                "Mrs", 
+////                "Gill",
+////                "Saash",
+////                "gillash@gmail.com"
+////        );
+//        
+//        // adding disorders
+//        // - disorder(disorder_ID(PK), disorder_name, user_ID(FK), doctor_ID(FK))
+//        String userID1 = "user2000000000";
+//        String disorderID = Tools.createUserID(Tools.generateRandomNumStr(), "disorder");
 //        insert.insertRecord(
-//                "doctor", 
-//                doctorID1, 
-//                "Mrs", 
-//                "Gill",
-//                "Saash",
-//                "gillash@gmail.com"
+//                "disorder", 
+//                disorderID,
+//                "depression", 
+//                userID1,
+//                doctorID1
 //        );
-        
-        // adding disorders
-        // - disorder(disorder_ID(PK), disorder_name, user_ID(FK), doctor_ID(FK))
-        String userID1 = "user223";
-        String disorderID = Tools.createUserID(Tools.generateRandomNumStr(), "disorder");
-        insert.insertRecord(
-                "disorder", 
-                disorderID,
-                "depression", 
-                userID1,
-                doctorID1
-        );
-        
+//        
+//
+//
+//           
+//        insert.terminate();
+    
+        System.out.println("testing...");
 
+        String adminEmail = "hash@gmail.com"; 
+        new WindowAdmin(adminEmail).setVisible(true);
 
-           
-        insert.terminate();
     }
     
 }

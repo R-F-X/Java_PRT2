@@ -50,28 +50,37 @@ public class DBUpdate {
     }
     // =====================================
 
-    public static void updateDisorder(String tableName,String optionColumn,String dID, String change){
+    public static void updateDisorder(
+            String tableName,
+            String optionColumn,
+            String dID, 
+            String change
+    ){
         System.out.println(optionColumn);
         System.out.println(change);
-        System.out.println("about to update");
-        System.out.println("table affected: " + tableName + "," + "column name: " + optionColumn);
+        System.out.println("about to update...");
+        System.out.println("table affected: " + tableName + ", column name: " + optionColumn);
         System.out.println("ID ROW: " + " " + dID);
         
-        String sql = "UPDATE DISORDER SET " + optionColumn + "=?" + " WHERE disorder_ID  = ? ";
+        String sql = "UPDATE DISORDER SET " + optionColumn + "=?" + " WHERE disorder_ID  =?";
         
         try {
             PreparedStatement pstmt = con.prepareStatement(sql);
            
-             pstmt.setString(1, change);
-              pstmt.setString(2, dID);
+            pstmt.setString(1, change);
+            pstmt.setString(2, dID);
 
             // Execute the update statement
             int rowsAffected = pstmt.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println("Disorder table updated successfully.");
-            } else {
+                JOptionPane.showMessageDialog(null, "Table updated successfully");
+            } 
+            else {
                 System.out.println("No rows affected.");
             }
+            
+            JOptionPane.showMessageDialog(null, "Updated successfully \nRefresh table");
 
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -82,6 +91,7 @@ public class DBUpdate {
     
     
     // mine
+    // works? 
     public static void updateRecord(
             String tableName,
             String optionColumn,
@@ -107,7 +117,10 @@ public class DBUpdate {
             int rowsAffected = pstmt.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println(tableName + " table updated successfully.");
-            } else {
+                JOptionPane.showMessageDialog(null, "Table updated successfully");
+            } 
+            
+            else {
                 System.out.println("No rows affected.");
             }
 

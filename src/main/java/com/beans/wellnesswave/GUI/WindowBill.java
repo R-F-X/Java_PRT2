@@ -10,7 +10,6 @@ public class WindowBill extends javax.swing.JFrame {
 
     public WindowBill() {
         initComponents();
-        //setSize(Toolkit.getDefaultToolkit().getScreenSize()); //suitable to certain screen size of device
     }
 
     protected String userID;
@@ -212,34 +211,9 @@ public class WindowBill extends javax.swing.JFrame {
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // verify input fields
-
-//- bill(order_ID, user_ID, account_num, card_type, price)
-//        else if (!email.contains("@") || !email.contains(".")) {
-//            JOptionPane.showMessageDialog(null, "Invalid Email Address. It should contain '@' symbol and domain name", "ERROR", JOptionPane.ERROR_MESSAGE);
-//        } else if (createPassword.length() > 14) {
-//            JOptionPane.showMessageDialog(null, "Password should not exceed 14 characters", "ERROR", JOptionPane.ERROR_MESSAGE);
-//        }
         String accNum = inAccNum.getText();
 
-//        if (accNum.contains("abcdefghijklmnopqrstuvwxyz")) {
-//            JOptionPane.showMessageDialog(
-//                    null,
-//                    "Cannot contain letters",
-//                    "ERROR",
-//                    JOptionPane.ERROR_MESSAGE
-//            );
-//
-//            this.errorMessage.setText("Account number cannot contain letters");
-//        } 
-  
         if (!this.checkIfInt(accNum)){
-//            JOptionPane.showMessageDialog(
-//                    null,
-//                    "Cannot contain letters",
-//                    "ERROR",
-//                    JOptionPane.ERROR_MESSAGE
-//            );
-
             this.errorMessage.setText("Account number cannot contain letters");
         }
         
@@ -247,15 +221,12 @@ public class WindowBill extends javax.swing.JFrame {
             this.errorMessage.setText("Enter an account number");
         } 
         else if (accNum.length() < 8) {
-//            JOptionPane.showMessageDialog(
-//                null, 
-//                "Account number should be 16 digits long", 
-//                "ERROR", 
-//                JOptionPane.ERROR_MESSAGE
-//            );
             this.errorMessage.setText("Account number should be 8 digits or longer");
-        } // success
+        } 
+
+        // success
         //        else if (!inAccNum.getText().equals("")){
+//        else if (!inAccNum.getText().equals("") && accNum.length() == 10)
         else {
 
             System.out.println(selectedCardType);

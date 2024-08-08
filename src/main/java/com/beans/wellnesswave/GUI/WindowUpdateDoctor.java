@@ -3,6 +3,7 @@ package com.beans.wellnesswave.GUI;
 
 import com.beans.wellnesswave.databaseControl.DBUpdate;
 import java.awt.event.ItemEvent;
+import javax.swing.JOptionPane;
 
 public class WindowUpdateDoctor extends javax.swing.JFrame {
     public WindowUpdateDoctor() {
@@ -18,14 +19,14 @@ public class WindowUpdateDoctor extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        disorderID = new javax.swing.JTextField();
+        doctorID = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        newValue = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Update (doctor records)");
-        setType(java.awt.Window.Type.UTILITY);
+        setTitle("Update (Doctor records)");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(6, 152, 17));
 
@@ -34,11 +35,11 @@ public class WindowUpdateDoctor extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(6, 152, 17));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Update");
+        jLabel1.setText("Update Doctor");
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setText("doctor ID: ");
+        jLabel2.setText("doctor_ID: ");
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -51,7 +52,7 @@ public class WindowUpdateDoctor extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "disorder_name", "user_ID", "doctor_ID" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "title", "doctor_name", "doctor_surname", "doctor_email" }));
         jComboBox1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jComboBox1ItemStateChanged(evt);
@@ -76,14 +77,14 @@ public class WindowUpdateDoctor extends javax.swing.JFrame {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
-                                        .addComponent(disorderID, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(doctorID, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(newValue, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(135, 135, 135)
-                        .addComponent(jLabel1)))
+                        .addGap(85, 85, 85)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(68, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -94,11 +95,11 @@ public class WindowUpdateDoctor extends javax.swing.JFrame {
                 .addGap(38, 38, 38)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(disorderID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(doctorID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(newValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
@@ -133,6 +134,7 @@ public class WindowUpdateDoctor extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     String selectedOption; 
@@ -150,20 +152,34 @@ public class WindowUpdateDoctor extends javax.swing.JFrame {
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         // check disorder ID
-        String dID = disorderID.getText();
-        String change = jTextField2.getText();
+        String dID = doctorID.getText();
+        String change = newValue.getText();
         System.out.println(dID);
         System.out.println(change);
         
-         //PLEASE MAKE SURE YOUR COMBOBOX NAMES ARE IDENTICAL! 
-         // to the columns in the database table u want to change else it wont work
         String columnSelect = (String) jComboBox1.getSelectedItem();
-        
         System.out.println("THIS IS THE COMBOBOX VALUE:" + columnSelect);
-          
-        DBUpdate.connect(); 
-        DBUpdate.updateDisorder("Disorder",columnSelect, dID ,change);
-        DBUpdate.terminate(); 
+        
+        if (
+            dID.equals("") || 
+            change.equals("") 
+        ){
+            JOptionPane.showMessageDialog(
+                null, 
+                "Input field cannot be Empty", 
+                "Error",
+                JOptionPane.ERROR_MESSAGE
+            );
+        }
+
+        // success
+        else{ 
+            DBUpdate.connect(); 
+//            DBUpdate.updateDisorder("doctor", columnSelect, dID , change);
+            DBUpdate.updateRecord("doctor", columnSelect, "doctor_ID", dID, change);
+            DBUpdate.terminate(); 
+        }
+       
     }//GEN-LAST:event_jLabel4MouseClicked
 
     public static void main(String args[]) {
@@ -202,13 +218,13 @@ public class WindowUpdateDoctor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField disorderID;
+    private javax.swing.JTextField doctorID;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField newValue;
     // End of variables declaration//GEN-END:variables
 }

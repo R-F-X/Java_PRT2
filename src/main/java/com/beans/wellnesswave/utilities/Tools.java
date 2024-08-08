@@ -47,6 +47,27 @@ public class Tools {
         }
     }
     
+    // from 
+    // https://www.studytonight.com/java-examples/check-if-input-is-integer-in-java#:~:text=hasNextInt()%20method%20checks%20whether,otherwise%20it%20will%20return%20false.
+    
+    public boolean checkIfInt(String input) {
+//		String input = "1234";           
+        Boolean flag = true;
+        for (int a = 0; a < input.length(); a++) {
+            if (a == 0 && input.charAt(a) == '-') {
+                continue;
+            }
+            if (!Character.isDigit(input.charAt(a))) {
+                flag = false;
+            }
+        }
+//        if (flag) {
+//            System.out.println(input + " is valid Integer");
+//        }
+        return flag;
+
+    }
+    
     // ===========================================
     // TEST
 //    public static void main(String[] args){

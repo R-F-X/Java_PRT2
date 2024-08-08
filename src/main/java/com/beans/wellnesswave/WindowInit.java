@@ -1416,9 +1416,12 @@ public class WindowInit extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Password Is Mandatory", "ERROR", JOptionPane.ERROR_MESSAGE);
         } else if (confirmPassword.equals("")) {
             JOptionPane.showMessageDialog(null, "Confirming password Is Mandatory", "ERROR", JOptionPane.ERROR_MESSAGE);
-        } else if (!username.matches("^[a-z0-9_]*$")) {
-            JOptionPane.showMessageDialog(null, "Error: Username can only contain lowercase letters, numbers, and underscores (_).", "ERROR", JOptionPane.ERROR_MESSAGE);
-        } else if (!email.contains("@") || !email.contains(".")) {
+        } 
+//        else if (!username.matches("^[a-z0-9_]*$")) {
+//            JOptionPane.showMessageDialog(null, "Error: Username can only contain lowercase letters, numbers, and underscores (_).", "ERROR", JOptionPane.ERROR_MESSAGE);
+//        } 
+//        
+        else if (!email.contains("@") || !email.contains(".")) {
             JOptionPane.showMessageDialog(null, "Invalid Email Address. It should contain '@' symbol and domain name", "ERROR", JOptionPane.ERROR_MESSAGE);
         } else if (createPassword.length() > 14) {
             JOptionPane.showMessageDialog(null, "Password should not exceed 14 characters", "ERROR", JOptionPane.ERROR_MESSAGE);
@@ -1447,7 +1450,6 @@ public class WindowInit extends javax.swing.JFrame {
             
             // next window
             new WindowQuestionnaire(ID).setVisible(true);
-//            new WindowSelectDisorder().setVisible(true);
         }
     }//GEN-LAST:event_enterAppBtn3MouseClicked
 
@@ -1505,9 +1507,12 @@ public class WindowInit extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Password Is Mandatory", "ERROR", JOptionPane.ERROR_MESSAGE);
         } else if (confirmPassword.equals("")) {
             JOptionPane.showMessageDialog(null, "Confirming password Is Mandatory", "ERROR", JOptionPane.ERROR_MESSAGE);
-        } else if (!username.matches("^[a-z0-9_]*$")) {
-            JOptionPane.showMessageDialog(null, "Error: Username can only contain lowercase letters, numbers, and underscores (_).", "ERROR", JOptionPane.ERROR_MESSAGE);
-        } else if (!email.contains("@") || !email.contains(".")) {
+        } 
+//        else if (!username.matches("^[a-z0-9_]*$")) {
+//            JOptionPane.showMessageDialog(null, "Error: Username can only contain lowercase letters, numbers, and underscores (_).", "ERROR", JOptionPane.ERROR_MESSAGE);
+//        } 
+        
+        else if (!email.contains("@") || !email.contains(".")) {
             JOptionPane.showMessageDialog(null, "Invalid Email Address. It should contain '@' symbol and domain name", "ERROR", JOptionPane.ERROR_MESSAGE);
         } else if (createPassword.length() > 14) {
             JOptionPane.showMessageDialog(null, "Password should not exceed 14 characters", "ERROR", JOptionPane.ERROR_MESSAGE);

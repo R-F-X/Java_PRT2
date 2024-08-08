@@ -7,21 +7,27 @@ password: wave
 
 Tables
 ------
-- user(user_ID(PK), user_email, user_first_name, user_last_name, account_type)
+- bill_temp
+(order_ID(PK), user_ID, account_number, card_type, price)
 
-- login(email(PK), password)
+- disorder
+(disorder_ID(PK), disorder_name, user_ID(FK)(U), doctor_ID(FK)(U))
 
-- disorder(disorder_ID(PK), disorder_name, user_ID(FK), doctor_ID(FK))
+- doctor
+(doctor_ID(PK), title, doctor_name, doctor_surname, doctor_email)
 
-- doctor(doctor_ID(PK), title, doctor_name, doctor_surname, doctor_email)
+- journal
+(journal_ID(varchar(40)), user_ID, journal_entry)
 
-- bill(order_ID, user_ID, account_num, card_type, price)
+- login
+(user_email(PK), user_password)
 
-- journal(journal_ID(varchar(40)), user_ID, journal_entry)
+- user_temp
+(user_ID(PK), user_first_name, user_last_name, user_email(FK)(U), account_type)
 ---
 
-(removed) - package(package_type(PK), (numofdisorders), price)
----
-
-NOTE: all attributes are strings (varchar(30)) except for journal_ID
+NOTES 
+- all attributes are strings (varchar(30)) except for journal_ID
+PK  -> primary key and unique
+U   -> unique
 ---
