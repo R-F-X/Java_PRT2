@@ -49,7 +49,33 @@ public class DBUpdate {
         }
     }
     // =====================================
+    // JOSHUA 
+    public static void updateJournal(String newEntry, String journalID){ 
+// users need to view firstr, then type in the id of the entry
+              
+        String sql = "UPDATE JOURNAL SET JOURNAL_ENTRY" + " =?" + " WHERE JOURNAL_ID=? "; 
+//set journal column value where userid
+        
+        try {
+            PreparedStatement pstmt = con.prepareStatement(sql);
+           
+             pstmt.setString(1, newEntry);
+              pstmt.setString(2, journalID);
 
+            // Execute the update statement
+            int rowsAffected = pstmt.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("Disorder table updated successfully.");
+                JOptionPane.showMessageDialog(null, "Record updated \nRefresh");
+            } else {
+                System.out.println("No rows affected.");
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+    
     public static void updateDisorder(
             String tableName,
             String optionColumn,
@@ -85,10 +111,10 @@ public class DBUpdate {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        
-        
     }
-    
+
+    // =====================================
+
     
     // mine
     // works? 

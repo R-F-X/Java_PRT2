@@ -103,7 +103,7 @@ public class Table {
         insertToJTable(tableName, tableDB, numOfCols);
         // clearTable(tableName);
                 
-        JOptionPane.showMessageDialog(null, "Record deleted \nRefresh table");
+        JOptionPane.showMessageDialog(null, "Record deleted");
         DBDelete.terminate();
     }
 

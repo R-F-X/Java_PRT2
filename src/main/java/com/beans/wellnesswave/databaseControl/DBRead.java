@@ -4,6 +4,7 @@ import com.beans.wellnesswave.utilities.FileHandler;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
 
 public class DBRead {
     private static Connection con = null;
@@ -227,7 +228,43 @@ public class DBRead {
         }
     }
 
-    
+    // ************************************************************************
+    // JOSHUA
+    public static void readJournal(String tableName,String userID, DefaultTableModel model ){
+          String query = "SELECT * FROM " + tableName + " WHERE USER_ID ='" + userID + "'";
+          System.out.println("READ JOURNAL METHOD CALLED");
+          
+          try{
+           result = SQLStatement.executeQuery(query);
+               while (result.next()) {
+                String journalID = result.getString("JOURNAL_ID");
+                String journalEntry = result.getString("JOURNAL_ENTRY");
+                System.out.println("journalID: " + journalID );
+                System.out.println("Journal Entry: " + journalEntry);
+                System.out.println("--------------------------");
+                
+                 
+                   
+                   result.beforeFirst();
+                     int numOfCols = 3;
+            Object[] row = new Object[numOfCols];
+            while (result.next()) {        
+                System.out.println("First loop");
+
+                for (int i = 1; i <= numOfCols; i++) { 
+                    row[i - 1] = result.getObject(i); 
+                }
+                model.addRow(row);
+            }
+            }
+          }
+          catch(Exception e){
+              System.out.println(e);
+          }
+    }
+     
+    // ************************************************************************
+
 }
 
 

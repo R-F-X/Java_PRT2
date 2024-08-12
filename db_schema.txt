@@ -17,7 +17,7 @@ Tables
 (doctor_ID(PK), title, doctor_name, doctor_surname, doctor_email)
 
 - journal
-(journal_ID(varchar(40)), user_ID, journal_entry)
+(journal_ID(varchar(40)), user_ID, journal_entry(1000))
 
 - login
 (user_email(PK), user_password)

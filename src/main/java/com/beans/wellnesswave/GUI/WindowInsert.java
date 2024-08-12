@@ -107,8 +107,8 @@ public class WindowInsert extends javax.swing.JFrame {
                                 .addComponent(inDisorderName, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
                             .addComponent(forMessage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(133, 133, 133)
+                        .addComponent(jLabel1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(

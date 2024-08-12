@@ -1,40 +1,39 @@
+
 package com.beans.wellnesswave.GUI;
 
-import com.beans.wellnesswave.databaseControl.DBDelete;
 import com.beans.wellnesswave.databaseControl.DBInsert;
 import com.beans.wellnesswave.databaseControl.DBRead;
-import com.beans.wellnesswave.databaseControl.DBUpdate;
 
 // -------------------
+
 import java.awt.Color;
 import java.util.Random;
-import javax.swing.JLabel;
+import javax.swing.JLabel; 
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
+
 
 public class WindowHome extends javax.swing.JFrame {
-
     public WindowHome() {
         initComponents();
     }
-
+    
     protected String userEmail;
-    protected String userID;
-
-    public WindowHome(String inUserEmail) {
+    protected String userID; 
+    public WindowHome(String inUserEmail){
         initComponents();
-
+         
         this.userEmail = inUserEmail;
         System.out.println("Email: " + userEmail);
-        this.changeEmail.setText(userEmail);
-
+        this.changeEmail.setText(userEmail); 
+        
         this.setUserInfo(userEmail);
     }
-
-    public void setUserInfo(String email) {
+    
+    public void setUserInfo(String email){
         DBRead.connect();
         String[] info = DBRead.readAllRecords("user_temp", 5, email);
-
+        DBRead.terminate(); 
+        
         System.out.println(info[0]);
         System.out.println(info[1]);
         System.out.println(info[2]);
@@ -42,11 +41,11 @@ public class WindowHome extends javax.swing.JFrame {
         this.changeUsername.setText(info[0]);
         this.changeFirstName.setText(info[1]);
         this.changeLastName.setText(info[2]);
+        
 
         this.userID = info[0];
-        DBRead.terminate();
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -87,20 +86,14 @@ public class WindowHome extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         journalSpace = new javax.swing.JTextArea();
         jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Wellness Wave");
+        setPreferredSize(new java.awt.Dimension(1000, 600));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -490,16 +483,14 @@ public class WindowHome extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel17.setText("Journal");
 
-        journalSpace.setBackground(new java.awt.Color(59, 89, 22));
+        journalSpace.setBackground(new java.awt.Color(243, 196, 167));
         journalSpace.setColumns(20);
         journalSpace.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        journalSpace.setForeground(new java.awt.Color(193, 255, 114));
         journalSpace.setLineWrap(true);
         journalSpace.setRows(5);
         journalSpace.setTabSize(4);
         journalSpace.setText("\n");
         journalSpace.setBorder(null);
-        journalSpace.setCaretColor(new java.awt.Color(193, 255, 114));
         journalSpace.setMargin(new java.awt.Insets(10, 10, 10, 10));
         journalSpace.setMaximumSize(new java.awt.Dimension(2147483647, 350));
         journalSpace.setMinimumSize(new java.awt.Dimension(226, 35));
@@ -511,7 +502,7 @@ public class WindowHome extends javax.swing.JFrame {
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Add new entry");
-        jLabel18.setToolTipText("");
+        jLabel18.setToolTipText("Adds a journal entry to the database");
         jLabel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel18.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -523,11 +514,27 @@ public class WindowHome extends javax.swing.JFrame {
             }
         });
 
-        jLabel20.setBackground(new java.awt.Color(242, 124, 17));
+        jLabel19.setBackground(new java.awt.Color(153, 153, 0));
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("Save entry");
+        jLabel19.setToolTipText("Saves your entries to a textfile");
+        jLabel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel19.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel19.setOpaque(true);
+        jLabel19.setPreferredSize(new java.awt.Dimension(150, 40));
+        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel19MouseClicked(evt);
+            }
+        });
+
+        jLabel20.setBackground(new java.awt.Color(193, 255, 114));
         jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("Delete All Entries");
-        jLabel20.setToolTipText("");
+        jLabel20.setText("View all entries");
+        jLabel20.setToolTipText("Adds a journal entry to the database");
         jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel20.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -542,8 +549,8 @@ public class WindowHome extends javax.swing.JFrame {
         jLabel21.setBackground(new java.awt.Color(193, 255, 114));
         jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("View all entries");
-        jLabel21.setToolTipText("");
+        jLabel21.setText("Delete entry");
+        jLabel21.setToolTipText("Adds a journal entry to the database");
         jLabel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel21.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -555,11 +562,11 @@ public class WindowHome extends javax.swing.JFrame {
             }
         });
 
-        jLabel22.setBackground(new java.awt.Color(242, 124, 17));
+        jLabel22.setBackground(new java.awt.Color(193, 255, 114));
         jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel22.setText("Update");
-        jLabel22.setToolTipText("");
+        jLabel22.setText("Update entry");
+        jLabel22.setToolTipText("Adds a journal entry to the database");
         jLabel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel22.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -571,45 +578,6 @@ public class WindowHome extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "journal_ID", "user_ID", "journal_entry"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, true, true
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane3.setViewportView(jTable1);
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setText("Journal ID");
-
-        jLabel6.setText("Journal ID");
-
-        jLabel8.setText("Update Text");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -617,71 +585,38 @@ public class WindowHome extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel17)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel17)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(37, 37, 37)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jLabel8)
-                                        .addGap(0, 171, Short.MAX_VALUE))
-                                    .addComponent(jTextField1))
-                                .addGap(167, 167, 167))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
-                                        .addGap(26, 26, 26)
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel2))
-                        .addContainerGap())))
+                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(30, 30, 30)
+                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(235, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
                 .addComponent(jLabel17)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(24, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab3", jPanel3);
@@ -739,7 +674,7 @@ public class WindowHome extends javax.swing.JFrame {
     private void homeLBtnMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeLBtnMouseReleased
 //        homeLBtn.setBackground(Color.YELLOW);
 //        homeLBtn.setForeground(Color.BLACK);
-
+        
 //        this.onHover(homeLBtn);
     }//GEN-LAST:event_homeLBtnMouseReleased
 
@@ -764,9 +699,10 @@ public class WindowHome extends javax.swing.JFrame {
         new WindowResources().setVisible(true);
     }//GEN-LAST:event_resourceLabelMouseClicked
 
-    private String generateRandomNumStr() {
+    
+    private String generateRandomNumStr(){
         String rNum = "";
-
+        
         Random random = new Random();
         int num1 = random.nextInt(100);
         int num2 = random.nextInt(100);
@@ -775,106 +711,85 @@ public class WindowHome extends javax.swing.JFrame {
         rNum = String.valueOf(num1) + String.valueOf(num2) + String.valueOf(num3);
         return rNum;
     }
-
-    // add new entry //JOURNAL ADD TO DB Button
+    
+    // button
+    // add new entry
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
-        String entry = journalSpace.getText();
-
-//        if (entry.isEmpty()) {
-        if (entry.equals("")) {
-            JOptionPane.showMessageDialog(null, "Journal entry cannot be empty");
-        } else {
-            int confirmCode = JOptionPane.showConfirmDialog(
-                    null,
-                    "Are your sure you want to add this to your journal?",
-                    "Add to journal",
-                    JOptionPane.PLAIN_MESSAGE
+        int confirmCode = JOptionPane.showConfirmDialog(
+                null, 
+                "Are your sure you want to add this to your journal?",
+                "Add to journal",
+                JOptionPane.PLAIN_MESSAGE
+        );
+        System.out.println("Code: " + confirmCode);
+        
+        if (confirmCode == 0){
+            DBInsert insert = new DBInsert();
+        
+            String entry = journalSpace.getText();
+            String journalID = this.generateRandomNumStr(); 
+        
+            insert.insertRecord("journal", journalID, this.userID, entry);
+            insert.terminate();
+            
+            // display
+            JOptionPane.showMessageDialog(
+                null, 
+                "Journal entry was saved successfully",
+                "Success",
+                JOptionPane.INFORMATION_MESSAGE
             );
-            System.out.println("Code: " + confirmCode);
-
-            if (confirmCode == 0) {
-                DBInsert insert = new DBInsert();
-
-                String journalID = this.generateRandomNumStr();
-                System.out.println("JOURNAL ID RETURNED = " + journalID);
-
-                insert.insertRecord("journal", journalID, this.userID, entry);
-                System.out.println(this.userID);
-                insert.terminate();
-
-                // display
-                JOptionPane.showMessageDialog(
-                        null,
-                        "Journal entry was saved successfully",
-                        "Success",
-                        JOptionPane.INFORMATION_MESSAGE
-                );
-            }
         }
-
+        
+        
     }//GEN-LAST:event_jLabel18MouseClicked
 
-    // DELETE BUTTON JOURNAL
-    private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
-        DBDelete.connect();
-        String deleteIDString = jTextField3.getText();
+    // getting journal entries
+    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+        DBRead.connect();
+        DBRead.readAndWrite("journal", 3, this.userID, this.userID);
+//        DBRead.readAndWrite("journal", 3, this.userID);
 
-        if (deleteIDString.equals("")) {
-            JOptionPane.showMessageDialog(null, "Input cannot be empty");
-        } else {
-            DBDelete.delete("journal", deleteIDString);
-        }
-        DBDelete.terminate();
+        DBRead.terminate();
+        
+        // display
+        JOptionPane.showMessageDialog(
+                null, 
+                "Journal entry was saved to a textfile",
+                "Saved to textfile",
+                JOptionPane.INFORMATION_MESSAGE
+        );
+    }//GEN-LAST:event_jLabel19MouseClicked
+
+    private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
+        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel20MouseClicked
 
-    //SELECT JOURNAL
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
-        DBRead.connect();
-
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-        model.setRowCount(0);
-        System.out.println(userID);
-        DBRead.readJournal("JOURNAL", userID, model);
+        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel21MouseClicked
 
-    //UPDATE JOURNAL ENTRY
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
-        DBUpdate.connect();
-        String updatedText = jTextField1.getText();
-        String journalIDText = jTextField2.getText();
-
-        if (updatedText.equals("")) {
-            JOptionPane.showMessageDialog(null, "Input cannot be empty");
-        } else {
-            System.out.println(updatedText);
-            System.out.println(journalIDText);
-            DBUpdate.updateJournal(updatedText, journalIDText);
-        }
-
+        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel22MouseClicked
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
 
     // ==========================================================
     // CUSTOM METHODS
+    
     // used for all buttons on side bar except for the exit button
-    private void onHover(JLabel labelButton) {
+    private void onHover(JLabel labelButton){
         labelButton.setBackground(Color.YELLOW);
         labelButton.setForeground(Color.BLACK);
     }
-
-    private void offHover(JLabel labelButton) {
+    private void offHover(JLabel labelButton){
         labelButton.setBackground(Color.BLACK);
-        labelButton.setForeground(new Color(255, 255, 0));
+        labelButton.setForeground(new Color(255,255,0));
     }
-
+    
+    // add custom icon
+    
     // ==========================================================
+    
     // MAIN
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -930,102 +845,6 @@ public class WindowHome extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -1034,7 +853,7 @@ public class WindowHome extends javax.swing.JFrame {
             }
         });
     }
-
+  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Sidebar;
@@ -1056,16 +875,14 @@ public class WindowHome extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -1073,13 +890,8 @@ public class WindowHome extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel journalLBtn;
     private javax.swing.JTextArea journalSpace;
     private javax.swing.JLabel profileLBtn;

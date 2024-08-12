@@ -143,7 +143,7 @@ public class WindowInit extends javax.swing.JFrame {
         jLabel22.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel22.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_test3\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\images\\WellnessWave_Logo_resize1.png")); // NOI18N
+        jLabel22.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_v0.0.4\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\images\\WellnessWave_Logo_resize1.png")); // NOI18N
         jLabel22.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel22.setPreferredSize(new java.awt.Dimension(80, 20));
 
@@ -488,7 +488,7 @@ public class WindowInit extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 36)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_test3\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\icons8-back-32.png")); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_v0.0.4\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\icons8-back-32.png")); // NOI18N
         jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel10.setPreferredSize(new java.awt.Dimension(40, 40));
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -619,7 +619,7 @@ public class WindowInit extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_test3\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\icons8-back-32.png")); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_v0.0.4\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\icons8-back-32.png")); // NOI18N
         jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel11.setPreferredSize(new java.awt.Dimension(40, 40));
         jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1015,7 +1015,7 @@ public class WindowInit extends javax.swing.JFrame {
         jLabel28.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(193, 255, 114));
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel28.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_test3\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\icons8-back-32.png")); // NOI18N
+        jLabel28.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_v0.0.4\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\icons8-back-32.png")); // NOI18N
         jLabel28.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel28.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1240,7 +1240,7 @@ public class WindowInit extends javax.swing.JFrame {
         jLabel27.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(193, 255, 114));
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_test3\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\icons8-back-32.png")); // NOI18N
+        jLabel27.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_v0.0.4\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\icons8-back-32.png")); // NOI18N
         jLabel27.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel27.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

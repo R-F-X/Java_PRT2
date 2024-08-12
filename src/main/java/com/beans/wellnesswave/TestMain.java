@@ -2,6 +2,8 @@
 package com.beans.wellnesswave;
 
 import com.beans.wellnesswave.GUI.WindowAdmin;
+import com.beans.wellnesswave.GUI.WindowHome;
+import com.beans.wellnesswave.GUI.WindowHome;
 import com.beans.wellnesswave.databaseControl.DBDelete;
 import com.beans.wellnesswave.databaseControl.DBInsert;
 import com.beans.wellnesswave.utilities.FileHandler;
@@ -47,11 +49,12 @@ public class TestMain {
 //           
 //        insert.terminate();
     
-        System.out.println("testing...");
 
-        String adminEmail = "hash@gmail.com"; 
-        new WindowAdmin(adminEmail).setVisible(true);
+//        String adminEmail = "hash@gmail.com"; 
+//        new WindowAdmin(adminEmail).setVisible(true);
 
+        String adminEmail = "hash@gmail.com";
+        new WindowHome(adminEmail).setVisible(true);
     }
     
 }

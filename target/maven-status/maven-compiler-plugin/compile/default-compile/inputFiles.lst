@@ -3,6 +3,7 @@ C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wel
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\GUI\WindowUpdateDisorder.java
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\GUI\WindowQuestionnaire.java
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\GUI\WindowAdmin.java
+C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\databaseControl\Connect.java
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\databaseControl\DBDelete.java
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\utilities\QuestionnaireLogic.java
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\GUI\WindowUpdateDoctor.java
@@ -17,6 +18,7 @@ C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wel
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\TestMain.java
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\utilities\FileHandler.java
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\GUI\WindowInsertDoctor.java
+C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\GUI\WindowUpdateJEntry.java
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\GUI\WindowInsertDisorder.java
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\tests\TestInsertTable.java
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\GUI\WindowHome.java
@@ -26,4 +28,5 @@ C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wel
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\databaseControl\DBInsert.java
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\databaseControl\DBRead.java
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\utilities\Validation.java
+C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\GUI\WindowUpdateJEntry1.java
 C:\Users\jcbrm\Documents\#CPUT_all\#CPUT_programming\year2\PRT2\year_project\wellness_wave_v0.0.4\WellnessWave\src\main\java\com\beans\wellnesswave\utilities\Tools.java

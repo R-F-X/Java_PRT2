@@ -4,6 +4,7 @@ package com.beans.wellnesswave.databaseControl;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 public class DBDelete {
     private static Connection con = null;
@@ -62,8 +63,11 @@ public class DBDelete {
         }
     }
     
+
+    // =====================================
+    // JOSHUA 
+    // ***OVERLOAD*** //
     public static void delete(String table, String attribute, int value){
-        
         String query = "DELETE from " + table + " WHERE " + attribute + " = " + value;
        
         try{
@@ -80,4 +84,22 @@ public class DBDelete {
         }
     }
     
+     
+//    public static void delete(String table, int deleteID){
+    public static void delete(String table, String deleteID){
+        String query = "DELETE FROM " + table + " WHERE JOURNAL_ID = '" + deleteID + "'";
+        
+        try{
+            SQLStatement.executeUpdate(query);
+            System.out.println("<DELETED RECORD>");
+            JOptionPane.showMessageDialog(null, "Record deleted \nRefresh");
+        }
+        catch(SQLException SQLEx){
+            System.out.println(SQLEx.getMessage());
+        }
+    }
+    
+
+    // =====================================
+
 }

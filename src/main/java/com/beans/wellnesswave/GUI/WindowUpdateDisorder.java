@@ -24,6 +24,7 @@ public class WindowUpdateDisorder extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Update (Disorder records)");
@@ -51,6 +52,9 @@ public class WindowUpdateDisorder extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel4MouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel4MouseEntered(evt);
+            }
         });
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -65,6 +69,10 @@ public class WindowUpdateDisorder extends javax.swing.JFrame {
                 jComboBox1ItemStateChanged(evt);
             }
         });
+
+        jLabel3.setForeground(new java.awt.Color(6, 152, 17));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel3.setText("Select an attribute to update");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -88,7 +96,8 @@ public class WindowUpdateDisorder extends javax.swing.JFrame {
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
                                         .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(85, 85, 85)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -103,7 +112,9 @@ public class WindowUpdateDisorder extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(disorderID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
+                .addGap(22, 22, 22)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -163,7 +174,6 @@ public class WindowUpdateDisorder extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        // check disorder ID
         String dID = disorderID.getText();
         String change = jTextField2.getText();
         System.out.println(dID);
@@ -194,6 +204,10 @@ public class WindowUpdateDisorder extends javax.swing.JFrame {
             DBUpdate.terminate(); 
         }
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jLabel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel4MouseEntered
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -235,6 +249,7 @@ public class WindowUpdateDisorder extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
