@@ -13,6 +13,7 @@ import com.beans.wellnesswave.utilities.Tools;
 public class TestMain {
 
     public static void main(String[] args) {
+        System.out.println("testing...");
 //        FileHandler.openFile("new.txt", true);
 //        FileHandler.writeToFile("testing...");
 //        FileHandler.closeFile();

@@ -7,9 +7,9 @@ public class Connect {
     
     public static Connection initDBConnection(){
         Connection dbc = null; 
-        String DBURL = "jdbc:derby://localhost:1527/broken";
-        String username = "shattered";
-        String password = "dil";
+        String DBURL = "jdbc:derby://localhost:1527/wellnesswave";
+        String username = "wellness";
+        String password = "wave";
         
         System.out.println("attempting to establish connection...");
         try{

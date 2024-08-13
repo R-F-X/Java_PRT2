@@ -149,12 +149,12 @@ public class QuickAdd {
 
     // -----------------------------------------
     // TESTING
-//    public static void main(String[] args) {
-//        QuickAdd obj = new QuickAdd();
-//
-//        obj.connect();
-//        obj.createAllTables();
-//        
-//        System.out.println("\n<END OF TEST>");
-//    }
+    public static void main(String[] args) {
+        QuickAdd obj = new QuickAdd();
+
+        obj.connect();
+        obj.createAllTables();
+        
+        System.out.println("\n<END OF TEST>");
+    }
 }

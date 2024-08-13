@@ -1,21 +1,21 @@
-
 package com.beans.wellnesswave.GUI;
 
+import com.beans.wellnesswave.databaseControl.DBInsert;
+import com.beans.wellnesswave.utilities.Tools;
 import java.awt.event.ItemEvent;
 import javax.swing.JOptionPane;
 
-
 public class WindowSelectDisorder extends javax.swing.JFrame {
 
-    
     public WindowSelectDisorder() {
         initComponents();
     }
-    protected String userID; 
+    protected String userID;
+
     public WindowSelectDisorder(String inUserID) {
         initComponents();
-        
-        this.userID = inUserID; 
+
+        this.userID = inUserID;
         System.out.println("user ID: " + this.userID);
     }
 
@@ -145,16 +145,16 @@ public class WindowSelectDisorder extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    private String selectedDisorder; 
+    private String selectedDisorder;
     private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
-        if (evt.getStateChange() == ItemEvent.SELECTED){
+        if (evt.getStateChange() == ItemEvent.SELECTED) {
             System.out.println("SELECTED...");
-        
+
             Object item = evt.getItem();
-            
+
             System.out.println(item.toString());
 
-            selectedDisorder = item.toString(); 
+            selectedDisorder = item.toString();
         }
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
@@ -162,18 +162,25 @@ public class WindowSelectDisorder extends javax.swing.JFrame {
         int option = JOptionPane.showConfirmDialog(
                 null,
                 "Are you sure you want to select this option (" + selectedDisorder + ")?",
-                "Confirm", 
+                "Confirm",
                 JOptionPane.YES_NO_OPTION);
-        
+
         System.out.println(option);
-        
-        if (option == 0){
+
+        if (option == 0) {
             System.out.println(selectedDisorder);
+            String docID = "doc" + Tools.generateRandomNumStr();
+            String disorderID = "disorder" + Tools.generateRandomNumStr();
+
             // save to db
-            
+            DBInsert insertR = new DBInsert();
+//        insertR.insertRecord("disorder", dID, dName, uID, docID);
+            insertR.insertRecord("disorder", disorderID, selectedDisorder, this.userID, docID);
+            insertR.terminate();
+
             // close window
             this.dispose();
-            
+
             JOptionPane.showMessageDialog(null, "Almost done creating your account. Just one more thing");
 
             // go to next window
@@ -181,7 +188,6 @@ public class WindowSelectDisorder extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jLabel1MouseClicked
 
- 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
