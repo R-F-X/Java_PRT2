@@ -2,8 +2,8 @@
 __Description__ 	
 > _Desktop app to help people with mental-health challenges_
 - Started:	06.05.24
-- Updated: 	13.08.24
-- Status:	work-in-progress
+- Updated: 	07.10.24
+- Status:	COMPLETE
 
 - Developers
 	* https://github.com/kyran-325
