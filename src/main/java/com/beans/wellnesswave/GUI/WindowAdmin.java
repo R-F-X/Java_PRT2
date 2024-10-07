@@ -220,13 +220,13 @@ public class WindowAdmin extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Home", jPanel2);
 
-        jPanel3.setBackground(new java.awt.Color(0, 204, 102));
+        jPanel3.setBackground(new java.awt.Color(59, 89, 22));
         jPanel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jScrollPane2.setBackground(new java.awt.Color(153, 51, 0));
         jScrollPane2.setBorder(new javax.swing.border.MatteBorder(null));
 
-        tableUser.setBackground(new java.awt.Color(0, 102, 51));
+        tableUser.setBackground(new java.awt.Color(47, 59, 4));
         tableUser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tableUser.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableUser.setForeground(new java.awt.Color(255, 255, 255));
@@ -247,7 +247,7 @@ public class WindowAdmin extends javax.swing.JFrame {
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 204, 102));
+        jLabel3.setForeground(new java.awt.Color(135, 247, 85));
         jLabel3.setText("USERS TABLE");
         jLabel3.setOpaque(true);
 
@@ -371,7 +371,7 @@ public class WindowAdmin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 805, Short.MAX_VALUE)
+            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 810, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -393,13 +393,13 @@ public class WindowAdmin extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Users", jPanel3);
 
-        jPanel25.setBackground(new java.awt.Color(0, 153, 51));
+        jPanel25.setBackground(new java.awt.Color(59, 89, 22));
         jPanel25.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jScrollPane7.setBackground(new java.awt.Color(153, 51, 0));
         jScrollPane7.setBorder(new javax.swing.border.MatteBorder(null));
 
-        tableDisorder.setBackground(new java.awt.Color(0, 102, 51));
+        tableDisorder.setBackground(new java.awt.Color(47, 59, 4));
         tableDisorder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tableDisorder.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableDisorder.setForeground(new java.awt.Color(255, 255, 255));
@@ -428,7 +428,7 @@ public class WindowAdmin extends javax.swing.JFrame {
 
         jLabel35.setBackground(new java.awt.Color(0, 0, 0));
         jLabel35.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(0, 153, 51));
+        jLabel35.setForeground(new java.awt.Color(135, 247, 85));
         jLabel35.setText("DISORDERS TABLE");
         jLabel35.setOpaque(true);
 
@@ -553,7 +553,7 @@ public class WindowAdmin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(21, Short.MAX_VALUE))
-            .addComponent(jPanel26, javax.swing.GroupLayout.DEFAULT_SIZE, 805, Short.MAX_VALUE)
+            .addComponent(jPanel26, javax.swing.GroupLayout.DEFAULT_SIZE, 810, Short.MAX_VALUE)
         );
         jPanel25Layout.setVerticalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -575,13 +575,13 @@ public class WindowAdmin extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Disorders", jPanel25);
 
-        jPanel13.setBackground(new java.awt.Color(0, 204, 153));
+        jPanel13.setBackground(new java.awt.Color(59, 89, 22));
         jPanel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jScrollPane4.setBackground(new java.awt.Color(153, 51, 0));
         jScrollPane4.setBorder(new javax.swing.border.MatteBorder(null));
 
-        tableDoctor.setBackground(new java.awt.Color(0, 102, 51));
+        tableDoctor.setBackground(new java.awt.Color(47, 59, 4));
         tableDoctor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tableDoctor.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableDoctor.setForeground(new java.awt.Color(255, 255, 255));
@@ -610,7 +610,7 @@ public class WindowAdmin extends javax.swing.JFrame {
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 204, 153));
+        jLabel4.setForeground(new java.awt.Color(135, 247, 85));
         jLabel4.setText("DOCTORS TABLE");
         jLabel4.setOpaque(true);
 
@@ -732,7 +732,7 @@ public class WindowAdmin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, 805, Short.MAX_VALUE)
+            .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, 810, Short.MAX_VALUE)
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -756,13 +756,13 @@ public class WindowAdmin extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Doctors", jPanel13);
 
-        jPanel21.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel21.setBackground(new java.awt.Color(59, 89, 22));
         jPanel21.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jScrollPane6.setBackground(new java.awt.Color(153, 51, 0));
         jScrollPane6.setBorder(new javax.swing.border.MatteBorder(null));
 
-        tableBill.setBackground(new java.awt.Color(0, 102, 51));
+        tableBill.setBackground(new java.awt.Color(47, 59, 4));
         tableBill.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tableBill.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableBill.setForeground(new java.awt.Color(255, 255, 255));
@@ -788,7 +788,7 @@ public class WindowAdmin extends javax.swing.JFrame {
 
         jLabel31.setBackground(new java.awt.Color(0, 0, 0));
         jLabel31.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(0, 153, 102));
+        jLabel31.setForeground(new java.awt.Color(135, 247, 85));
         jLabel31.setText("BILL TABLE");
         jLabel31.setOpaque(true);
 
@@ -910,7 +910,7 @@ public class WindowAdmin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(jPanel22, javax.swing.GroupLayout.DEFAULT_SIZE, 805, Short.MAX_VALUE)
+            .addComponent(jPanel22, javax.swing.GroupLayout.DEFAULT_SIZE, 810, Short.MAX_VALUE)
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -934,13 +934,13 @@ public class WindowAdmin extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Bill", jPanel21);
 
-        pane_login.setBackground(new java.awt.Color(0, 153, 102));
+        pane_login.setBackground(new java.awt.Color(59, 89, 22));
         pane_login.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jScrollPane8.setBackground(new java.awt.Color(153, 51, 0));
         jScrollPane8.setBorder(new javax.swing.border.MatteBorder(null));
 
-        tableLogin.setBackground(new java.awt.Color(0, 102, 51));
+        tableLogin.setBackground(new java.awt.Color(47, 59, 4));
         tableLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tableLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableLogin.setForeground(new java.awt.Color(255, 255, 255));
@@ -961,7 +961,7 @@ public class WindowAdmin extends javax.swing.JFrame {
 
         jLabel33.setBackground(new java.awt.Color(0, 0, 0));
         jLabel33.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(0, 153, 102));
+        jLabel33.setForeground(new java.awt.Color(135, 247, 85));
         jLabel33.setText("LOGIN TABLE");
         jLabel33.setOpaque(true);
 
@@ -1086,7 +1086,7 @@ public class WindowAdmin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(jPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, 805, Short.MAX_VALUE)
+            .addComponent(jPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, 810, Short.MAX_VALUE)
         );
         pane_loginLayout.setVerticalGroup(
             pane_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

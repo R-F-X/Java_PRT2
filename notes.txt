@@ -22,3 +22,8 @@ images:
 - create database using 'db_schema.txt'
 - test all windows in buttons work and it database operations work
 ---
+
+
+encryption
+- doesn't work
+--- 

@@ -30,12 +30,12 @@ public class WindowUpdateDisorder extends javax.swing.JFrame {
         setTitle("Update (Disorder records)");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(6, 152, 17));
+        jPanel1.setBackground(new java.awt.Color(59, 89, 22));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(6, 152, 17));
+        jLabel1.setForeground(new java.awt.Color(135, 247, 85));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Update Disorder");
 
@@ -70,7 +70,7 @@ public class WindowUpdateDisorder extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setForeground(new java.awt.Color(6, 152, 17));
+        jLabel3.setForeground(new java.awt.Color(135, 247, 85));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText("Select an attribute to update");
 
@@ -173,6 +173,11 @@ public class WindowUpdateDisorder extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
+    
+    private void clearFields(){
+        disorderID.setText("");
+        jTextField2.setText("");
+    }
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         String dID = disorderID.getText();
         String change = jTextField2.getText();
@@ -202,6 +207,7 @@ public class WindowUpdateDisorder extends javax.swing.JFrame {
             // mine
             DBUpdate.updateRecord("Disorder", columnSelect, "disorder_ID", dID ,change);
             DBUpdate.terminate(); 
+            this.clearFields();
         }
     }//GEN-LAST:event_jLabel4MouseClicked
 

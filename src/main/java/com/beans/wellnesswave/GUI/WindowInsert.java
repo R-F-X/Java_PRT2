@@ -31,12 +31,12 @@ public class WindowInsert extends javax.swing.JFrame {
         setTitle("INSERT");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(6, 152, 17));
+        jPanel1.setBackground(new java.awt.Color(59, 89, 22));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(6, 152, 17));
+        jLabel1.setForeground(new java.awt.Color(135, 247, 85));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("INSERT");
 

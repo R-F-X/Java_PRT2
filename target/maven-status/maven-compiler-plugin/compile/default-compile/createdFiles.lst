@@ -21,11 +21,9 @@ com\beans\WellnessWave\GUI\WindowQuestionnaire$7.class
 com\beans\WellnessWave\GUI\WindowHome$2.class
 com\beans\WellnessWave\utilities\Table.class
 com\beans\WellnessWave\GUI\WindowUpdateJEntry$2.class
-com\beans\WellnessWave\GUI\WindowUpdateJEntry1$1.class
 com\beans\WellnessWave\GUI\WindowHome$8.class
 com\beans\WellnessWave\GUI\WindowUpdateDisorder$2.class
 com\beans\WellnessWave\WindowInit$23.class
-com\beans\WellnessWave\GUI\WindowUpdateJEntry1.class
 com\beans\WellnessWave\GUI\WindowUpdateUser.class
 com\beans\WellnessWave\GUI\WindowQuestionnaire$10.class
 com\beans\WellnessWave\GUI\WindowInsertUser$2.class
@@ -35,7 +33,6 @@ com\beans\WellnessWave\GUI\WindowUpdateUser$1.class
 com\beans\WellnessWave\WindowInit$35.class
 com\beans\WellnessWave\GUI\WindowAdmin$5.class
 com\beans\WellnessWave\GUI\WindowHome$9.class
-com\beans\WellnessWave\GUI\WindowUpdateJEntry1$2.class
 com\beans\WellnessWave\GUI\WindowAdmin$12.class
 com\beans\WellnessWave\GUI\WindowUpdateJEntry$3.class
 com\beans\WellnessWave\WindowInit$7.class
@@ -105,6 +102,7 @@ com\beans\WellnessWave\WindowInit$5.class
 com\beans\WellnessWave\GUI\WindowAdmin$14.class
 com\beans\WellnessWave\GUI\WindowInsertBill$3.class
 com\beans\WellnessWave\GUI\WindowQuestionnaire1$7.class
+com\beans\WellnessWave\GUI\WindowHome$13.class
 com\beans\WellnessWave\GUI\WindowResources$8.class
 com\beans\WellnessWave\GUI\WindowAdmin$7.class
 com\beans\WellnessWave\GUI\WindowUpdateUser$3.class
@@ -122,6 +120,7 @@ com\beans\WellnessWave\GUI\WindowQuestionnaire1$11.class
 com\beans\WellnessWave\GUI\WindowQuestionnaire1$8.class
 com\beans\WellnessWave\GUI\WindowBill$3.class
 com\beans\WellnessWave\WindowInit$25.class
+com\beans\WellnessWave\encrypt\Encryption.class
 com\beans\WellnessWave\WindowInit$12.class
 com\beans\WellnessWave\GUI\WindowResources$3.class
 com\beans\WellnessWave\GUI\WindowQuestionnaire1$2.class
@@ -175,6 +174,7 @@ com\beans\WellnessWave\GUI\WindowAdmin$26.class
 com\beans\WellnessWave\GUI\WindowInsertLogin$3.class
 com\beans\WellnessWave\GUI\WindowAdmin.class
 com\beans\WellnessWave\GUI\WindowInsertBill$2.class
+com\beans\WellnessWave\GUI\Refresh.class
 com\beans\WellnessWave\GUI\WindowQuestionnaire1.class
 com\beans\WellnessWave\TestMain.class
 com\beans\WellnessWave\GUI\WindowInsert$2.class

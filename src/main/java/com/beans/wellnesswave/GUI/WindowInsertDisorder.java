@@ -35,12 +35,12 @@ public class WindowInsertDisorder extends javax.swing.JFrame {
         setTitle("Insert Disorder");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(6, 152, 17));
+        jPanel1.setBackground(new java.awt.Color(59, 89, 22));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(6, 152, 17));
+        jLabel1.setForeground(new java.awt.Color(135, 247, 85));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Insert Disorder");
 
@@ -176,7 +176,12 @@ public class WindowInsertDisorder extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
-    // adding to disorder table
+    private void clearFields(){
+        inDisorderID.setText("");
+        inDisorderName.setText("");
+        inDoctorID.setText("");
+        inUserID.setText("");
+    }
     private void labelBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelBtnMouseClicked
         forMessage.setText("");
         String dID = inDisorderID.getText();
@@ -200,6 +205,7 @@ public class WindowInsertDisorder extends javax.swing.JFrame {
             DBInsert insertR = new DBInsert();
             insertR.insertRecord("disorder", dID, dName, uID, docID);
             insertR.terminate();
+            this.clearFields(); 
         }
         
     }//GEN-LAST:event_labelBtnMouseClicked

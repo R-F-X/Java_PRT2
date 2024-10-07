@@ -34,12 +34,12 @@ public class WindowInsertUser extends javax.swing.JFrame {
         setTitle("Insert User");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(6, 152, 17));
+        jPanel1.setBackground(new java.awt.Color(59, 89, 22));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(6, 152, 17));
+        jLabel1.setForeground(new java.awt.Color(135, 247, 85));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Insert User");
 
@@ -193,6 +193,13 @@ public class WindowInsertUser extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
+    private void clearFields(){
+        inUserID.setText("");
+        inUserFName.setText("");
+        inUserLName.setText("");
+        inUserEmail.setText("");
+        inAccType.setText("");
+    }
     // adding to disorder table
     private void labelBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelBtnMouseClicked
         System.out.println("clicked...");
@@ -227,19 +234,14 @@ public class WindowInsertUser extends javax.swing.JFrame {
             DBInsert insertR = new DBInsert();
             insertR.insertRecord("user_temp", userID, userFName, userLName, userEmail, accType);
             insertR.terminate();
+//            Refresh.insertToJTable(tableUser);
+            
+            this.clearFields(); 
         }
 
         else{
             forMessage.setText("Invalid account type");
         }
-        
-        // insertion
-//        else{
-//            DBInsert insertR = new DBInsert();
-//            insertR.insertRecord("user_temp", userID, userFName, userLName, userEmail, accType);
-//            insertR.terminate();
-//        }
-        
     }//GEN-LAST:event_labelBtnMouseClicked
 
     private void inUserLNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inUserLNameActionPerformed

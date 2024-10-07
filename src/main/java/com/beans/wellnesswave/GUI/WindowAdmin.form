@@ -266,7 +266,7 @@
         <Container class="javax.swing.JPanel" name="jPanel3">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="cc" red="0" type="rgb"/>
+              <Color blue="16" green="59" red="3b" type="rgb"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Default Cursor"/>
@@ -300,7 +300,7 @@
                       <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jPanel10" alignment="0" pref="805" max="32767" attributes="0"/>
+                  <Component id="jPanel10" alignment="0" pref="810" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -346,7 +346,7 @@
                 <Component class="javax.swing.JTable" name="tableUser">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="33" green="66" red="0" type="rgb"/>
+                      <Color blue="4" green="3b" red="2f" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -450,7 +450,7 @@
                       <Font name="Segoe UI" size="18" style="0"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="cc" red="0" type="rgb"/>
+                      <Color blue="55" green="f7" red="87" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="USERS TABLE"/>
                     <Property name="opaque" type="boolean" value="true"/>
@@ -623,7 +623,7 @@
         <Container class="javax.swing.JPanel" name="jPanel25">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="99" red="0" type="rgb"/>
+              <Color blue="16" green="59" red="3b" type="rgb"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Default Cursor"/>
@@ -652,7 +652,7 @@
                       <Component id="jScrollPane7" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="21" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="jPanel26" alignment="0" pref="805" max="32767" attributes="0"/>
+                  <Component id="jPanel26" alignment="0" pref="810" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -698,7 +698,7 @@
                 <Component class="javax.swing.JTable" name="tableDisorder">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="33" green="66" red="0" type="rgb"/>
+                      <Color blue="4" green="3b" red="2f" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -796,7 +796,7 @@
                       <Font name="Segoe UI" size="18" style="0"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="33" green="99" red="0" type="rgb"/>
+                      <Color blue="55" green="f7" red="87" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="DISORDERS TABLE"/>
                     <Property name="opaque" type="boolean" value="true"/>
@@ -973,7 +973,7 @@
         <Container class="javax.swing.JPanel" name="jPanel13">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="cc" red="0" type="rgb"/>
+              <Color blue="16" green="59" red="3b" type="rgb"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Default Cursor"/>
@@ -1002,7 +1002,7 @@
                       <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jPanel14" alignment="0" pref="805" max="32767" attributes="0"/>
+                  <Component id="jPanel14" alignment="0" pref="810" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -1051,7 +1051,7 @@
                 <Component class="javax.swing.JTable" name="tableDoctor">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="33" green="66" red="0" type="rgb"/>
+                      <Color blue="4" green="3b" red="2f" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1155,7 +1155,7 @@
                       <Font name="Segoe UI" size="18" style="0"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="cc" red="0" type="rgb"/>
+                      <Color blue="55" green="f7" red="87" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="DOCTORS TABLE"/>
                     <Property name="opaque" type="boolean" value="true"/>
@@ -1331,7 +1331,7 @@
         <Container class="javax.swing.JPanel" name="jPanel21">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="99" red="0" type="rgb"/>
+              <Color blue="16" green="59" red="3b" type="rgb"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Default Cursor"/>
@@ -1360,7 +1360,7 @@
                       <Component id="jScrollPane6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jPanel22" alignment="0" pref="805" max="32767" attributes="0"/>
+                  <Component id="jPanel22" alignment="0" pref="810" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -1409,7 +1409,7 @@
                 <Component class="javax.swing.JTable" name="tableBill">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="33" green="66" red="0" type="rgb"/>
+                      <Color blue="4" green="3b" red="2f" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1513,7 +1513,7 @@
                       <Font name="Segoe UI" size="18" style="0"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="99" red="0" type="rgb"/>
+                      <Color blue="55" green="f7" red="87" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="BILL TABLE"/>
                     <Property name="opaque" type="boolean" value="true"/>
@@ -1689,7 +1689,7 @@
         <Container class="javax.swing.JPanel" name="pane_login">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="99" red="0" type="rgb"/>
+              <Color blue="16" green="59" red="3b" type="rgb"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Default Cursor"/>
@@ -1718,7 +1718,7 @@
                       <Component id="jScrollPane8" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jPanel24" alignment="0" pref="805" max="32767" attributes="0"/>
+                  <Component id="jPanel24" alignment="0" pref="810" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -1767,7 +1767,7 @@
                 <Component class="javax.swing.JTable" name="tableLogin">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="33" green="66" red="0" type="rgb"/>
+                      <Color blue="4" green="3b" red="2f" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1853,7 +1853,7 @@
                       <Font name="Segoe UI" size="18" style="0"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="99" red="0" type="rgb"/>
+                      <Color blue="55" green="f7" red="87" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="LOGIN TABLE"/>
                     <Property name="opaque" type="boolean" value="true"/>

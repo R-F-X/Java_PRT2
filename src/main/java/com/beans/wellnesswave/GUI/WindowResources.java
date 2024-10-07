@@ -38,7 +38,7 @@ public class WindowResources extends javax.swing.JFrame {
         setTitle("Wellness Wave - Resources");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(54, 88, 3));
+        jPanel1.setBackground(new java.awt.Color(47, 59, 4));
         jPanel1.setPreferredSize(new java.awt.Dimension(600, 500));
 
         jLabel2.setBackground(new java.awt.Color(193, 255, 114));
@@ -178,7 +178,7 @@ public class WindowResources extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(21, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(31, 31, 31)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)

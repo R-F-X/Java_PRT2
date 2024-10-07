@@ -28,12 +28,12 @@ public class WindowUpdateLogin extends javax.swing.JFrame {
         setTitle("Update (Login records)");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(6, 152, 17));
+        jPanel1.setBackground(new java.awt.Color(59, 89, 22));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(6, 152, 17));
+        jLabel1.setForeground(new java.awt.Color(135, 247, 85));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Update Login");
 
@@ -127,6 +127,11 @@ public class WindowUpdateLogin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    private void clearFields(){
+        userID.setText("");
+        newValue.setText("");
+    }
     String selectedOption; 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         String dID = userID.getText();
@@ -150,6 +155,7 @@ public class WindowUpdateLogin extends javax.swing.JFrame {
             DBUpdate.connect(); 
             DBUpdate.updateRecord("login", "user_password", "user_email", dID, change);
             DBUpdate.terminate(); 
+            this.clearFields(); 
         }
        
     }//GEN-LAST:event_jLabel4MouseClicked

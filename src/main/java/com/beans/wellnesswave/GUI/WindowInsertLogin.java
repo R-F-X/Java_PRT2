@@ -27,12 +27,12 @@ public class WindowInsertLogin extends javax.swing.JFrame {
         setTitle("Insert Bill");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(6, 152, 17));
+        jPanel1.setBackground(new java.awt.Color(59, 89, 22));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(6, 152, 17));
+        jLabel1.setForeground(new java.awt.Color(135, 247, 85));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Insert Login");
 
@@ -148,22 +148,11 @@ public class WindowInsertLogin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    
-//    public boolean checkIfInt(String input) {
-//        Boolean flag = true;
-//        for (int a = 0; a < input.length(); a++) {
-//            if (a == 0 && input.charAt(a) == '-') {
-//                continue;
-//            }
-//            if (!Character.isDigit(input.charAt(a))) {
-//                flag = false;
-//            }
-//        }
-//        return flag;
-//    }
-    
-    
-    // adding to disorder table
+     private void clearFields(){
+        inUserEmail.setText("");
+        inUserPassword.setText("");
+    }
+      
     private void labelBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelBtnMouseClicked
         forMessage.setText("");
         String userEmail = inUserEmail.getText();
@@ -181,6 +170,7 @@ public class WindowInsertLogin extends javax.swing.JFrame {
             DBInsert insertR = new DBInsert();
             insertR.insertRecord("login", userEmail, userPassword);
             insertR.terminate();
+            this.clearFields();
         }
         
     }//GEN-LAST:event_labelBtnMouseClicked

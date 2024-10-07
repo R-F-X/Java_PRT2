@@ -2,7 +2,7 @@
 __Description__ 	
 > _Desktop app to help people with mental-health challenges_
 - Started:	06.05.24
-- Updated: 	11.08.24
+- Updated: 	13.08.24
 - Status:	work-in-progress
 
 - Developers

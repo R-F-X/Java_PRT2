@@ -99,6 +99,7 @@ public class WindowHome extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         updateJournalEntry = new javax.swing.JTextArea();
+        jLabel23 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Wellness Wave");
@@ -182,7 +183,7 @@ public class WindowHome extends javax.swing.JFrame {
         exitLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         exitLabel.setForeground(new java.awt.Color(255, 255, 255));
         exitLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        exitLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_v0.0.4\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\exit1.png")); // NOI18N
+        exitLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Downloads\\WellnessWave\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\exit1.png")); // NOI18N
         exitLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exitLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -239,17 +240,18 @@ public class WindowHome extends javax.swing.JFrame {
         jTabbedPane1.setMinimumSize(new java.awt.Dimension(800, 400));
         jTabbedPane1.setPreferredSize(new java.awt.Dimension(800, 600));
 
-        jPanel1.setBackground(new java.awt.Color(96, 119, 68));
+        jPanel1.setBackground(new java.awt.Color(47, 59, 4));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Welcome to Wellness Wave");
 
-        resourceLabel.setBackground(new java.awt.Color(59, 82, 4));
-        resourceLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        resourceLabel.setBackground(new java.awt.Color(118, 137, 72));
+        resourceLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         resourceLabel.setForeground(new java.awt.Color(255, 255, 255));
         resourceLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         resourceLabel.setText("View Resources");
+        resourceLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         resourceLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         resourceLabel.setOpaque(true);
         resourceLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -276,6 +278,8 @@ public class WindowHome extends javax.swing.JFrame {
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setAutoscrolls(false);
         jTextArea1.setBorder(null);
+        jTextArea1.setCaretColor(new java.awt.Color(193, 255, 114));
+        jTextArea1.setCaretPosition(0);
         jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout advicePanelLayout = new javax.swing.GroupLayout(advicePanel);
@@ -344,7 +348,7 @@ public class WindowHome extends javax.swing.JFrame {
 
         imageProfile.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         imageProfile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imageProfile.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_v0.0.4\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\profile.png")); // NOI18N
+        imageProfile.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Downloads\\WellnessWave\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\profile.png")); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel3.setText("User ID");
@@ -499,8 +503,11 @@ public class WindowHome extends javax.swing.JFrame {
         journalSpace.setRows(5);
         journalSpace.setTabSize(4);
         journalSpace.setText("\n");
-        journalSpace.setBorder(null);
+        journalSpace.setToolTipText("Start typing to add a new journal entry");
+        journalSpace.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(59, 89, 22), 5));
         journalSpace.setCaretColor(new java.awt.Color(193, 255, 114));
+        journalSpace.setCaretPosition(0);
+        journalSpace.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         journalSpace.setMargin(new java.awt.Insets(10, 10, 10, 10));
         journalSpace.setMaximumSize(new java.awt.Dimension(2147483647, 350));
         journalSpace.setMinimumSize(new java.awt.Dimension(226, 35));
@@ -527,7 +534,7 @@ public class WindowHome extends javax.swing.JFrame {
         jLabel20.setBackground(new java.awt.Color(242, 124, 17));
         jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("Delete All Entries");
+        jLabel20.setText("Delete entry");
         jLabel20.setToolTipText("");
         jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -559,7 +566,7 @@ public class WindowHome extends javax.swing.JFrame {
         jLabel22.setBackground(new java.awt.Color(242, 124, 17));
         jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel22.setText("Update");
+        jLabel22.setText("Update entry");
         jLabel22.setToolTipText("");
         jLabel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -610,6 +617,23 @@ public class WindowHome extends javax.swing.JFrame {
         updateJournalEntry.setRows(5);
         jScrollPane4.setViewportView(updateJournalEntry);
 
+        jLabel23.setBackground(new java.awt.Color(59, 89, 22));
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(193, 255, 114));
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel23.setText("Refresh");
+        jLabel23.setToolTipText("");
+        jLabel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(59, 89, 22)));
+        jLabel23.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel23.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel23.setOpaque(true);
+        jLabel23.setPreferredSize(new java.awt.Dimension(150, 40));
+        jLabel23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel23MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -626,7 +650,8 @@ public class WindowHome extends javax.swing.JFrame {
                         .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel2))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
@@ -642,8 +667,9 @@ public class WindowHome extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(11, 11, 11)
                 .addComponent(jLabel17)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -653,23 +679,23 @@ public class WindowHome extends javax.swing.JFrame {
                     .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel8)
                         .addGap(1, 1, 1)
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(17, Short.MAX_VALUE))
+                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
+                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(41, 41, 41)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab3", jPanel3);
@@ -797,6 +823,9 @@ public class WindowHome extends javax.swing.JFrame {
                         "Success",
                         JOptionPane.INFORMATION_MESSAGE
                 );
+                
+                // clear
+                journalSpace.setText("");
             }
         }
 
@@ -811,6 +840,7 @@ public class WindowHome extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Input cannot be empty");
         } else {
             DBDelete.delete("journal", deleteIDString);
+            jTextField3.setText("");
         }
         DBDelete.terminate();
     }//GEN-LAST:event_jLabel20MouseClicked
@@ -837,6 +867,10 @@ public class WindowHome extends javax.swing.JFrame {
             System.out.println(updatedText);
             System.out.println(journalIDText);
             DBUpdate.updateJournal(updatedText, journalIDText);
+            
+            // clear fields
+            updateJournalEntry.setText("");
+            jTextField2.setText("");
         }
 
     }//GEN-LAST:event_jLabel22MouseClicked
@@ -844,6 +878,16 @@ public class WindowHome extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    // REFRESH
+    private void jLabel23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel23MouseClicked
+        DBRead.connect();
+
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.setRowCount(0);
+        System.out.println(userID);
+        DBRead.readJournal("JOURNAL", userID, model);
+    }//GEN-LAST:event_jLabel23MouseClicked
 
     // ==========================================================
     // CUSTOM METHODS
@@ -1044,6 +1088,7 @@ public class WindowHome extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

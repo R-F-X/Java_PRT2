@@ -65,7 +65,7 @@ public class DBUpdate {
             // Execute the update statement
             int rowsAffected = pstmt.executeUpdate();
             if (rowsAffected > 0) {
-                System.out.println("Disorder table updated successfully.");
+                System.out.println("Journal table updated successfully.");
                 JOptionPane.showMessageDialog(null, "Record updated \nRefresh");
             } else {
                 System.out.println("No rows affected.");

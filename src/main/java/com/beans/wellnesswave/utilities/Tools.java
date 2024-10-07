@@ -10,6 +10,10 @@ public class Tools {
         String userID = reverseStr(name) + email;
         return userID;
     }
+    public static String createUserID1(String name, String email){
+        String userID = reverseStr(name) + email.charAt(0) + email.charAt(1) + email.charAt(2);
+        return userID;
+    }
     
     public static String reverseStr(String word){
         String reversed = "";

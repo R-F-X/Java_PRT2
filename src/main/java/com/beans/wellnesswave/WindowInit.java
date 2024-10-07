@@ -143,7 +143,7 @@ public class WindowInit extends javax.swing.JFrame {
         jLabel22.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel22.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_v0.0.4\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\images\\WellnessWave_Logo_resize1.png")); // NOI18N
+        jLabel22.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Downloads\\WellnessWave\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\images\\WellnessWave_Logo_resize1.png")); // NOI18N
         jLabel22.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel22.setPreferredSize(new java.awt.Dimension(80, 20));
 
@@ -200,7 +200,7 @@ public class WindowInit extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("tab7", coverPane);
 
-        paneForgotPassword.setBackground(new java.awt.Color(118, 137, 72));
+        paneForgotPassword.setBackground(new java.awt.Color(47, 59, 4));
 
         jLabel19.setFont(new java.awt.Font("Cambria", 3, 30)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
@@ -328,6 +328,7 @@ public class WindowInit extends javax.swing.JFrame {
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("Back to Login");
+        jLabel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jLabel21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel21.setOpaque(true);
         jLabel21.setPreferredSize(new java.awt.Dimension(80, 20));
@@ -376,7 +377,7 @@ public class WindowInit extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("tab8", paneForgotPassword);
 
-        paneLogin.setBackground(new java.awt.Color(118, 137, 72));
+        paneLogin.setBackground(new java.awt.Color(47, 59, 4));
         paneLogin.setPreferredSize(new java.awt.Dimension(600, 500));
 
         jPanel6.setBackground(new java.awt.Color(47, 59, 4));
@@ -481,14 +482,14 @@ public class WindowInit extends javax.swing.JFrame {
         paneAdminLogin.setBackground(new java.awt.Color(0, 0, 0));
 
         jLabel4.setFont(new java.awt.Font("Cambria", 3, 48)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(135, 247, 85));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Login");
 
         jLabel10.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 36)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_v0.0.4\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\icons8-back-32.png")); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Downloads\\WellnessWave\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\icons8-back-32.png")); // NOI18N
         jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel10.setPreferredSize(new java.awt.Dimension(40, 40));
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -497,7 +498,7 @@ public class WindowInit extends javax.swing.JFrame {
             }
         });
 
-        jPanel11.setBackground(new java.awt.Color(223, 223, 91));
+        jPanel11.setBackground(new java.awt.Color(135, 247, 85));
 
         lblFuName3.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         lblFuName3.setText("Email");
@@ -505,7 +506,7 @@ public class WindowInit extends javax.swing.JFrame {
         lblUsername3.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         lblUsername3.setText("Password");
 
-        ALoginEmail.setBackground(new java.awt.Color(223, 223, 91));
+        ALoginEmail.setBackground(new java.awt.Color(135, 247, 85));
         ALoginEmail.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         ALoginEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -513,7 +514,7 @@ public class WindowInit extends javax.swing.JFrame {
             }
         });
 
-        ALoginPassword.setBackground(new java.awt.Color(223, 223, 91));
+        ALoginPassword.setBackground(new java.awt.Color(135, 247, 85));
         ALoginPassword.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         ALoginPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -563,7 +564,7 @@ public class WindowInit extends javax.swing.JFrame {
         });
 
         jLabel25.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setForeground(new java.awt.Color(135, 247, 85));
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel25.setText("Administrator");
 
@@ -609,17 +610,18 @@ public class WindowInit extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("AdminL", paneAdminLogin);
 
-        paneUserLogin.setBackground(new java.awt.Color(47, 59, 4));
+        paneUserLogin.setBackground(new java.awt.Color(0, 0, 0));
+        paneUserLogin.setForeground(new java.awt.Color(135, 247, 85));
 
         jLabel5.setFont(new java.awt.Font("Cambria", 3, 48)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(135, 247, 85));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Login");
 
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_v0.0.4\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\icons8-back-32.png")); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Downloads\\WellnessWave\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\icons8-back-32.png")); // NOI18N
         jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel11.setPreferredSize(new java.awt.Dimension(40, 40));
         jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -628,7 +630,8 @@ public class WindowInit extends javax.swing.JFrame {
             }
         });
 
-        jPanel10.setBackground(new java.awt.Color(223, 223, 91));
+        jPanel10.setBackground(new java.awt.Color(135, 247, 85));
+        jPanel10.setForeground(new java.awt.Color(135, 247, 85));
 
         lblFuName2.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         lblFuName2.setText("Email");
@@ -636,7 +639,7 @@ public class WindowInit extends javax.swing.JFrame {
         lblUsername2.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         lblUsername2.setText("Password");
 
-        PLoginEmail.setBackground(new java.awt.Color(223, 223, 91));
+        PLoginEmail.setBackground(new java.awt.Color(135, 247, 85));
         PLoginEmail.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         PLoginEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -644,7 +647,7 @@ public class WindowInit extends javax.swing.JFrame {
             }
         });
 
-        PLoginPassword.setBackground(new java.awt.Color(223, 223, 91));
+        PLoginPassword.setBackground(new java.awt.Color(135, 247, 85));
         PLoginPassword.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         PLoginPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -694,7 +697,7 @@ public class WindowInit extends javax.swing.JFrame {
         });
 
         jLabel26.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setForeground(new java.awt.Color(135, 247, 85));
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel26.setText("Patient");
 
@@ -744,7 +747,7 @@ public class WindowInit extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Sign up");
 
-        jPanel7.setBackground(new java.awt.Color(118, 137, 72));
+        jPanel7.setBackground(new java.awt.Color(47, 59, 4));
         jPanel7.setPreferredSize(new java.awt.Dimension(360, 200));
 
         jLabel7.setBackground(new java.awt.Color(47, 59, 4));
@@ -843,7 +846,8 @@ public class WindowInit extends javax.swing.JFrame {
 
         paneSignupA.setBackground(new java.awt.Color(0, 0, 0));
 
-        jPanel2.setBackground(new java.awt.Color(223, 223, 91));
+        jPanel2.setBackground(new java.awt.Color(135, 247, 85));
+        jPanel2.setForeground(new java.awt.Color(135, 247, 85));
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 240));
 
         lblFuName5.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
@@ -851,7 +855,7 @@ public class WindowInit extends javax.swing.JFrame {
         lblFuName5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         lblFuName5.setPreferredSize(new java.awt.Dimension(120, 30));
 
-        txtFieldFName2.setBackground(new java.awt.Color(223, 223, 91));
+        txtFieldFName2.setBackground(new java.awt.Color(135, 247, 85));
         txtFieldFName2.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
         txtFieldFName2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         txtFieldFName2.addActionListener(new java.awt.event.ActionListener() {
@@ -865,7 +869,7 @@ public class WindowInit extends javax.swing.JFrame {
         lblUsername5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         lblUsername5.setPreferredSize(new java.awt.Dimension(120, 30));
 
-        txtFieldUName2.setBackground(new java.awt.Color(223, 223, 91));
+        txtFieldUName2.setBackground(new java.awt.Color(135, 247, 85));
         txtFieldUName2.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
         txtFieldUName2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         txtFieldUName2.addActionListener(new java.awt.event.ActionListener() {
@@ -879,7 +883,7 @@ public class WindowInit extends javax.swing.JFrame {
         lblEmail4.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         lblEmail4.setPreferredSize(new java.awt.Dimension(120, 30));
 
-        txtFieldEmail2.setBackground(new java.awt.Color(223, 223, 91));
+        txtFieldEmail2.setBackground(new java.awt.Color(135, 247, 85));
         txtFieldEmail2.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
         txtFieldEmail2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         txtFieldEmail2.addActionListener(new java.awt.event.ActionListener() {
@@ -893,7 +897,7 @@ public class WindowInit extends javax.swing.JFrame {
         lblCreatePassword1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         lblCreatePassword1.setPreferredSize(new java.awt.Dimension(120, 30));
 
-        txtFieldCreatePassword2.setBackground(new java.awt.Color(223, 223, 91));
+        txtFieldCreatePassword2.setBackground(new java.awt.Color(135, 247, 85));
         txtFieldCreatePassword2.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
         txtFieldCreatePassword2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         txtFieldCreatePassword2.addActionListener(new java.awt.event.ActionListener() {
@@ -907,7 +911,7 @@ public class WindowInit extends javax.swing.JFrame {
         lblConPassword3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         lblConPassword3.setPreferredSize(new java.awt.Dimension(120, 30));
 
-        txtFieldConfirmPassword2.setBackground(new java.awt.Color(223, 223, 91));
+        txtFieldConfirmPassword2.setBackground(new java.awt.Color(135, 247, 85));
         txtFieldConfirmPassword2.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
         txtFieldConfirmPassword2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         txtFieldConfirmPassword2.addActionListener(new java.awt.event.ActionListener() {
@@ -971,7 +975,6 @@ public class WindowInit extends javax.swing.JFrame {
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        signInBtn1.setBackground(new java.awt.Color(255, 255, 255));
         signInBtn1.setFont(new java.awt.Font("Cambria", 0, 12)); // NOI18N
         signInBtn1.setForeground(new java.awt.Color(255, 255, 255));
         signInBtn1.setText("Already have an account?");
@@ -990,14 +993,15 @@ public class WindowInit extends javax.swing.JFrame {
         });
 
         waveTitle1.setFont(new java.awt.Font("Cambria", 3, 48)); // NOI18N
-        waveTitle1.setForeground(new java.awt.Color(193, 255, 114));
+        waveTitle1.setForeground(new java.awt.Color(135, 247, 85));
         waveTitle1.setText("Sign Up");
 
-        enterAppBtn4.setBackground(new java.awt.Color(223, 223, 91));
+        enterAppBtn4.setBackground(new java.awt.Color(0, 0, 0));
         enterAppBtn4.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        enterAppBtn4.setForeground(new java.awt.Color(255, 255, 255));
         enterAppBtn4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         enterAppBtn4.setText("SIGN UP");
-        enterAppBtn4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(48, 234, 46)));
+        enterAppBtn4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
         enterAppBtn4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         enterAppBtn4.setOpaque(true);
         enterAppBtn4.setPreferredSize(new java.awt.Dimension(80, 20));
@@ -1008,14 +1012,13 @@ public class WindowInit extends javax.swing.JFrame {
         });
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(193, 255, 114));
+        jLabel14.setForeground(new java.awt.Color(135, 247, 85));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Administrator");
 
         jLabel28.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(193, 255, 114));
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel28.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_v0.0.4\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\icons8-back-32.png")); // NOI18N
         jLabel28.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel28.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1034,7 +1037,7 @@ public class WindowInit extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneSignupALayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel28)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
                 .addGroup(paneSignupALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(waveTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1066,9 +1069,9 @@ public class WindowInit extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("tab9", paneSignupA);
 
-        paneSignupP.setBackground(new java.awt.Color(47, 59, 4));
+        paneSignupP.setBackground(new java.awt.Color(0, 0, 0));
 
-        jPanel1.setBackground(new java.awt.Color(223, 223, 91));
+        jPanel1.setBackground(new java.awt.Color(135, 247, 85));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 240));
 
         lblFuName1.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
@@ -1076,7 +1079,7 @@ public class WindowInit extends javax.swing.JFrame {
         lblFuName1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         lblFuName1.setPreferredSize(new java.awt.Dimension(120, 30));
 
-        txtFieldFName1.setBackground(new java.awt.Color(223, 223, 91));
+        txtFieldFName1.setBackground(new java.awt.Color(135, 247, 85));
         txtFieldFName1.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
         txtFieldFName1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         txtFieldFName1.addActionListener(new java.awt.event.ActionListener() {
@@ -1090,7 +1093,7 @@ public class WindowInit extends javax.swing.JFrame {
         lblUsername1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         lblUsername1.setPreferredSize(new java.awt.Dimension(120, 30));
 
-        txtFieldUName1.setBackground(new java.awt.Color(223, 223, 91));
+        txtFieldUName1.setBackground(new java.awt.Color(135, 247, 85));
         txtFieldUName1.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
         txtFieldUName1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         txtFieldUName1.addActionListener(new java.awt.event.ActionListener() {
@@ -1104,7 +1107,7 @@ public class WindowInit extends javax.swing.JFrame {
         lblEmail1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         lblEmail1.setPreferredSize(new java.awt.Dimension(120, 30));
 
-        txtFieldEmail1.setBackground(new java.awt.Color(223, 223, 91));
+        txtFieldEmail1.setBackground(new java.awt.Color(135, 247, 85));
         txtFieldEmail1.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
         txtFieldEmail1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         txtFieldEmail1.addActionListener(new java.awt.event.ActionListener() {
@@ -1118,7 +1121,7 @@ public class WindowInit extends javax.swing.JFrame {
         lblCreatePassword.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         lblCreatePassword.setPreferredSize(new java.awt.Dimension(120, 30));
 
-        txtFieldCreatePassword1.setBackground(new java.awt.Color(223, 223, 91));
+        txtFieldCreatePassword1.setBackground(new java.awt.Color(135, 247, 85));
         txtFieldCreatePassword1.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
         txtFieldCreatePassword1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         txtFieldCreatePassword1.addActionListener(new java.awt.event.ActionListener() {
@@ -1132,7 +1135,7 @@ public class WindowInit extends javax.swing.JFrame {
         lblConPassword2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         lblConPassword2.setPreferredSize(new java.awt.Dimension(120, 30));
 
-        txtFieldConfirmPassword1.setBackground(new java.awt.Color(223, 223, 91));
+        txtFieldConfirmPassword1.setBackground(new java.awt.Color(135, 247, 85));
         txtFieldConfirmPassword1.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
         txtFieldConfirmPassword1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         txtFieldConfirmPassword1.addActionListener(new java.awt.event.ActionListener() {
@@ -1196,7 +1199,6 @@ public class WindowInit extends javax.swing.JFrame {
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        signInBtn.setBackground(new java.awt.Color(255, 255, 255));
         signInBtn.setFont(new java.awt.Font("Cambria", 0, 12)); // NOI18N
         signInBtn.setForeground(new java.awt.Color(255, 255, 255));
         signInBtn.setText("Already have an account?");
@@ -1215,14 +1217,15 @@ public class WindowInit extends javax.swing.JFrame {
         });
 
         waveTitle.setFont(new java.awt.Font("Cambria", 3, 48)); // NOI18N
-        waveTitle.setForeground(new java.awt.Color(193, 255, 114));
+        waveTitle.setForeground(new java.awt.Color(135, 247, 85));
         waveTitle.setText("Sign Up");
 
-        enterAppBtn3.setBackground(new java.awt.Color(223, 223, 91));
+        enterAppBtn3.setBackground(new java.awt.Color(0, 0, 0));
         enterAppBtn3.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        enterAppBtn3.setForeground(new java.awt.Color(255, 255, 255));
         enterAppBtn3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         enterAppBtn3.setText("SIGN UP");
-        enterAppBtn3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(48, 234, 46)));
+        enterAppBtn3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
         enterAppBtn3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         enterAppBtn3.setOpaque(true);
         enterAppBtn3.setPreferredSize(new java.awt.Dimension(80, 20));
@@ -1233,14 +1236,13 @@ public class WindowInit extends javax.swing.JFrame {
         });
 
         jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(193, 255, 114));
+        jLabel24.setForeground(new java.awt.Color(135, 247, 85));
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setText("Patient");
 
         jLabel27.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(193, 255, 114));
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setIcon(new javax.swing.ImageIcon("C:\\Users\\jcbrm\\Documents\\#CPUT_all\\#CPUT_programming\\year2\\PRT2\\year_project\\wellness_wave_v0.0.4\\WellnessWave\\src\\main\\java\\com\\beans\\wellnesswave\\icons\\imageicons\\icons8-back-32.png")); // NOI18N
         jLabel27.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel27.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1259,12 +1261,13 @@ public class WindowInit extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(paneSignupPLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel27)
-                        .addGap(170, 170, 170)
-                        .addGroup(paneSignupPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(waveTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(paneSignupPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(paneSignupPLayout.createSequentialGroup()
+                                .addComponent(jLabel27)
+                                .addGap(210, 210, 210)
+                                .addComponent(waveTitle)))))
+                .addGap(0, 107, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneSignupPLayout.createSequentialGroup()
                 .addContainerGap(212, Short.MAX_VALUE)
                 .addGroup(paneSignupPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)

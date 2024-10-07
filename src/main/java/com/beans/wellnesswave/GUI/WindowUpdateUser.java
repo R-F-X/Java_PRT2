@@ -29,12 +29,12 @@ public class WindowUpdateUser extends javax.swing.JFrame {
         setTitle("Update (User records)");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(6, 152, 17));
+        jPanel1.setBackground(new java.awt.Color(59, 89, 22));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(6, 152, 17));
+        jLabel1.setForeground(new java.awt.Color(135, 247, 85));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Update User");
 
@@ -60,7 +60,7 @@ public class WindowUpdateUser extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setForeground(new java.awt.Color(6, 152, 17));
+        jLabel3.setForeground(new java.awt.Color(135, 247, 85));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText("Select an attribute to update");
 
@@ -158,6 +158,12 @@ public class WindowUpdateUser extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
+    
+    private void clearFields(){
+        userID.setText("");
+        newValue.setText("");
+    }
+      
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         String dID = userID.getText();
         String change = newValue.getText();
@@ -180,23 +186,13 @@ public class WindowUpdateUser extends javax.swing.JFrame {
         }
 
         // success
-        else if (
-                change.equals("admin") || change.equals("Admin") || 
-                change.equals("patient") || change.equals("Patient")
-        ){
+        else{
             DBUpdate.connect(); 
-//            DBUpdate.updateDisorder("doctor", columnSelect, dID , change);
             DBUpdate.updateRecord("user_temp", columnSelect, "user_ID", dID, change);
             DBUpdate.terminate(); 
+            this.clearFields();
         }
-        else{ 
-            JOptionPane.showMessageDialog(
-                null, 
-                "Invalid Account type", 
-                "Error",
-                JOptionPane.ERROR_MESSAGE
-            );
-        }
+       
        
     }//GEN-LAST:event_jLabel4MouseClicked
 
